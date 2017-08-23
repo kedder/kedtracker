@@ -1,4 +1,6 @@
-all: firmware
+all: firmware build-firmware
+
+FIRMWARE_GIT = git@github.com:kedder/diy-tracker.git
 
 flash: firmware
 	openocd -f openocd/stm32f1.cfg \
@@ -12,8 +14,19 @@ flash: firmware
 	   -c shutdown
 	@echo Flashing completed
 
-.PHONY: firmware
-firmware:
+console:
+	#screen /dev/ttyUSB0 115200,echo
+	picocom --baud 115200 --echo /dev/ttyUSB0
+
+
+firmware: firmware/makefile
+
+firmware/makefile:
+	git submodule init
+	git submodule update
+
+.PHONY: build-firmware
+build-firmware: firmware
 	$(MAKE) -C firmware
 
 
