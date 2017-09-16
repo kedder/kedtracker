@@ -1,4 +1,4 @@
-update=Wed 02 Aug 2017 08:22:38 PM EEST
+update=Sun 10 Sep 2017 07:45:59 PM EEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -60,3 +60,13 @@ LibName28=contrib
 LibName29=valves
 LibName30=stm32
 LibName31=ogntracker
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
