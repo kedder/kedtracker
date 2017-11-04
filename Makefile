@@ -2,7 +2,7 @@ all: firmware build-firmware
 
 FIRMWARE_GIT = git@github.com:kedder/diy-tracker.git
 
-flash: firmware
+flash: build-firmware
 	openocd -f openocd/stm32f1.cfg \
 	   -c init \
 	   -c targets \
@@ -13,6 +13,13 @@ flash: firmware
 	   -c "reset run" \
 	   -c shutdown
 	@echo Flashing completed
+
+.PHONY: debugger
+debugger:
+	openocd -f openocd/stm32f1.cfg \
+	   -c init \
+	   -c targets \
+	   -c halt
 
 console:
 	#screen /dev/ttyUSB0 115200,echo
