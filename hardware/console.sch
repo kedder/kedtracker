@@ -310,7 +310,7 @@ U 1 1 59FFEA83
 P 7550 2050
 F 0 "C14" H 7560 2120 50  0000 L CNN
 F 1 "22pF" H 7560 1970 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 7550 2050 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 7550 2050 50  0001 C CNN
 F 3 "" H 7550 2050 50  0001 C CNN
 	1    7550 2050
 	0    -1   -1   0   
@@ -321,7 +321,7 @@ U 1 1 59FFEAE2
 P 7550 1750
 F 0 "C13" H 7560 1820 50  0000 L CNN
 F 1 "22pF" H 7560 1670 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 7550 1750 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 7550 1750 50  0001 C CNN
 F 3 "" H 7550 1750 50  0001 C CNN
 	1    7550 1750
 	0    -1   -1   0   
@@ -350,7 +350,7 @@ F 3 "" H 8400 1650 50  0001 C CNN
 $EndComp
 Text GLabel 8300 1250 1    60   Input ~ 0
 3.3V
-Text GLabel 9700 2900 2    60   Input ~ 0
+Text GLabel 9500 2900 2    60   Input ~ 0
 5V
 $Comp
 L Earth #PWR028
@@ -601,7 +601,7 @@ Wire Wire Line
 Wire Wire Line
 	9400 3100 9400 3950
 Wire Wire Line
-	9150 2900 9400 2900
+	9150 2900 9500 2900
 $Comp
 L C_Small C17
 U 1 1 5A0638EE
@@ -663,19 +663,6 @@ Wire Wire Line
 	7950 1350 7900 1350
 Wire Wire Line
 	7900 1350 7900 1400
-$Comp
-L Polyfuse_Small F1
-U 1 1 5A06547F
-P 9500 2900
-F 0 "F1" V 9425 2900 50  0000 C CNN
-F 1 "1A" V 9575 2900 50  0000 C CNN
-F 2 "Fuse_Holders_and_Fuses:Fuse_SMD1206_Reflow" H 9550 2700 50  0001 L CNN
-F 3 "" H 9500 2900 50  0001 C CNN
-	1    9500 2900
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	9600 2900 9700 2900
 Text Label 2400 2850 0    40   ~ 0
 MAX232_TX
 Text Label 9650 1350 0    40   ~ 0
