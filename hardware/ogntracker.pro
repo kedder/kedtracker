@@ -1,4 +1,4 @@
-update=Sun 12 Nov 2017 12:29:11 PM EET
+update=Sat 25 Nov 2017 05:43:37 PM EET
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,6 +25,16 @@ version=1
 NetIExt=net
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=40
 [eeschema]
 version=1
 LibDir=/home/andrey/projects/electronics/kicad-library/library;/home/andrey/projects/electronics/lib
@@ -60,14 +70,5 @@ LibName28=contrib
 LibName29=valves
 LibName30=stm32
 LibName31=ogntracker
-LibName32=kedder
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=Pcbnew
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=40
+LibName32=switches
+LibName33=kedder
