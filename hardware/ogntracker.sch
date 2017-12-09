@@ -1229,7 +1229,7 @@ F 1 "STATUS_SMD" H 1675 7350 50  0000 L CNN
 F 2 "LEDs:LED_0603" V 1850 7450 50  0001 C CNN
 F 3 "" V 1850 7450 50  0001 C CNN
 	1    1850 7450
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L LED_Small D2
@@ -1240,7 +1240,7 @@ F 1 "STATUS_PANEL" H 1675 7000 50  0000 L CNN
 F 2 "OGN Tracker:Molex_PicoBlade_02x1.25mm_HandSoldering" V 1850 7100 50  0001 C CNN
 F 3 "" V 1850 7100 50  0001 C CNN
 	1    1850 7100
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	2250 7450 1950 7450
