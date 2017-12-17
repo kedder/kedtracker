@@ -1,4 +1,4 @@
-all: firmware build-firmware
+all: firmware build-firmware schematics-png
 
 FIRMWARE_GIT = git@github.com:kedder/diy-tracker.git
 
@@ -39,3 +39,7 @@ build-firmware: firmware
 
 clean:
 	$(MAKE) -C firmware clean
+
+.PHONY: schematics-png
+schematics-png:
+	$(MAKE) -C hardware/render

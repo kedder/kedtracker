@@ -22,14 +22,25 @@ Ked Tracker is designed using [KiCad](http://kicad-pcb.org/) electronic schemati
 * Uses FLARM NMEA sentences to report detected nearby aircrafts for
   interoperability with existing hardware and software.
 
-* Communication via standard IGC RJ45 socket or LX NAV style RJ45 socket.
+* Communication via standard IGC RJ45 socket.
   Allows to re-use existing equipment like FLARM viewers or cables.
 
+* Communication via USB interface. Device is visible as virtual COM port
+  when connected to a computer. Requires no special cables other then standerd
+  micro-USB cable. Device can also be powered by 5V from USB interface.
+
+* Communication via Bluetooth. For hassle-free wireless connection with
+  phone or tablet.
+
 * Barometric sensor onboard for more precise altitude measurement.
+
+* Slot for SD-card. Currently for logging device activity. Firmware for IGC
+  flight logger is pending.
 
 ## Schematics
 
 Current schematics can be also downloaded in
-[PDF format](hardware/render/kedtracker-schematics.pdf?raw=true).
+[PDF format](hardware/render/kedtracker.pdf?raw=true).
 
-![Schematic](/hardware/render/kedtracker-schematics.png?raw=true "Schematic")
+![Schematic Page 1](/hardware/render/kedtracker-0.png?raw=true "Schematic Page 1")
+![Schematic Page 2](/hardware/render/kedtracker-1.png?raw=true "Schematic Page 2")
