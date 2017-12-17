@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="148mm"
-   height="210mm"
-   viewBox="0 0 148 210"
+   width="210mm"
+   height="148mm"
+   viewBox="0 0 210 148"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.82106906"
-     inkscape:cx="432.50247"
-     inkscape:cy="514.69409"
+     inkscape:zoom="0.5805835"
+     inkscape:cx="287.65339"
+     inkscape:cy="468.55195"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -57,16 +57,16 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-87)">
+     transform="translate(0,-149)">
     <rect
        style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.49987119;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4485"
        width="54.50013"
        height="79.50013"
-       x="32.107079"
-       y="105.35709" />
+       x="27.607079"
+       y="179.8571" />
     <g
-       transform="matrix(0.1054904,0,0,-0.1054904,34.526104,184.82289)"
+       transform="matrix(0.1054904,0,0,-0.1054904,30.026104,259.32289)"
        inkscape:label="ink_ext_XXXXXX"
        id="g4495">
       <g
@@ -341,80 +341,80 @@
        id="rect4562"
        width="55"
        height="6.44485"
-       x="31.857147"
-       y="142.35182" />
+       x="27.357147"
+       y="216.85182" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:Hack;-inkscape-font-specification:'Hack, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="49.163795"
-       y="147.62891"
+       x="44.663795"
+       y="222.12891"
        id="text4665"><tspan
          sodipodi:role="line"
          id="tspan4663"
-         x="49.163795"
-         y="147.62891"
+         x="44.663795"
+         y="222.12891"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;font-family:Hack;-inkscape-font-specification:'Hack, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.26458332px">2ED121</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:5.64444447px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="34.008938"
-       y="111.97412"
+       x="29.508938"
+       y="186.47412"
        id="text4669"><tspan
          sodipodi:role="line"
-         x="34.008938"
-         y="111.97412"
+         x="29.508938"
+         y="186.47412"
          style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:5.64444447px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332px"
          id="tspan4677">KDR Tracker</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.17499995px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="74.258965"
-       y="112.03091"
+       x="69.758965"
+       y="186.53091"
        id="text4683"><tspan
          sodipodi:role="line"
          id="tspan4681"
-         x="74.258965"
-         y="112.03091"
+         x="69.758965"
+         y="186.53091"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.17499995px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332px">v0.5</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11666656px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="34.396996"
-       y="121.20137"
+       x="29.896996"
+       y="195.70137"
        id="text4687"><tspan
          sodipodi:role="line"
-         x="34.396996"
-         y="121.20137"
+         x="29.896996"
+         y="195.70137"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11666656px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332px"
          id="tspan4689">Open Glider Network tracker made by Andrey </tspan><tspan
          sodipodi:role="line"
-         x="34.396996"
-         y="123.84721"
+         x="29.896996"
+         y="198.3472"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11666656px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332px"
          id="tspan4570">Lebedev, andrey.lebedev@gmail.com.</tspan><tspan
          sodipodi:role="line"
-         x="34.396996"
-         y="126.49303"
+         x="29.896996"
+         y="200.99304"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11666656px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332px"
          id="tspan4712" /><tspan
          sodipodi:role="line"
-         x="34.396996"
-         y="129.13887"
+         x="29.896996"
+         y="203.63887"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11666656px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332px"
          id="tspan4714">Open Source project is under development at  </tspan><tspan
          sodipodi:role="line"
-         x="34.396996"
-         y="131.7847"
+         x="29.896996"
+         y="206.2847"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11666656px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332px"
          id="tspan4724">https://github.com/kedder/kdrtracker. Based on </tspan><tspan
          sodipodi:role="line"
-         x="34.396996"
-         y="134.43054"
+         x="29.896996"
+         y="208.93054"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11666656px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332px"
          id="tspan906">reference implementation of glidernet.org.</tspan></text>
     <g
        id="g4569"
-       transform="translate(-20.5,-42.5)">
+       transform="translate(-25,32)">
       <text
          id="text4587"
          y="181.34157"
@@ -445,13 +445,13 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.17499995px;line-height:125%;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="34.308094"
-       y="116.75504"
+       x="29.808094"
+       y="191.25505"
        id="text4683-5"><tspan
          sodipodi:role="line"
          id="tspan4681-0"
-         x="34.308094"
-         y="116.75504"
+         x="29.808094"
+         y="191.25505"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.17499995px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332px">SN: 00004</tspan></text>
   </g>
 </svg>
