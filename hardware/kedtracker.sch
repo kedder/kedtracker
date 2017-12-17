@@ -39,8 +39,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 2
 Title "Ked Tracker"
-Date "2017-11-05"
-Rev "0.5"
+Date "2017-12-17"
+Rev "0.6"
 Comp ""
 Comment1 "Open Glider Network Tracker"
 Comment2 ""

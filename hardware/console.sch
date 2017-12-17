@@ -38,11 +38,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 2
-Title "Console Input/Output and External Connectivity"
-Date "2017-11-05"
-Rev "0.5"
+Title "Ked Tracker"
+Date "2017-12-17"
+Rev "0.6"
 Comp ""
-Comment1 ""
+Comment1 "Open Glider Network Tracker"
 Comment2 ""
 Comment3 ""
 Comment4 ""
