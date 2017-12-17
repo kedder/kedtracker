@@ -37,6 +37,8 @@ Ked Tracker is designed using [KiCad](http://kicad-pcb.org/) electronic schemati
 * Slot for SD-card. Currently for logging device activity. Firmware for IGC
   flight logger is pending.
 
+* Beeper to provide sound feedback for important events.
+
 ## Schematics
 
 Current schematics can be also downloaded in
