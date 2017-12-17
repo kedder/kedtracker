@@ -69,6 +69,6 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=stm32
-LibName31=ogntracker
+LibName31=kedtracker
 LibName32=switches
 LibName33=kedder
