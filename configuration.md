@@ -28,6 +28,21 @@ $POGNS,,,,,20,
 
 ## Bluetooth Dongles
 
+### HC-05
+
+HC-05 requires "Key" pin (34) to be brought high in order to enter "AT mode".
+Once in at mode, open serial terminal on 38400 baud rate and execute these
+commands (each command should end with `CR` `LF`:
+
+```
+    AT
+    AT+VERSION?
+    AT+NAME=Ked Tracker XXXXXX
+    AT+UART=115200,0,0
+```
+
+Default PIN is `1234`.
+
 ### HC-06
 
 HC-06 is by default configured to read on 9600 baud rate. Connect it to via
