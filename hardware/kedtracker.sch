@@ -445,10 +445,8 @@ F 1 "BLUE" H 7700 5450 50  0000 C CNN
 F 2 "LEDs:LED_D5.0mm_Horizontal_O3.81mm_Z3.0mm" H 7700 5550 50  0001 C CNN
 F 3 "" H 7700 5550 50  0001 C CNN
 	1    7700 5550
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
-Text GLabel 7400 5550 0    40   Input ~ 0
-3.3V
 $Comp
 L Speaker LS1
 U 1 1 5A013A83
@@ -1460,4 +1458,17 @@ F 3 "" H 6600 4400 50  0001 C CNN
 	1    6600 4500
 	1    0    0    -1  
 $EndComp
+$Comp
+L Earth #PWR?
+U 1 1 5A76FDB7
+P 7400 5650
+F 0 "#PWR?" H 7400 5400 50  0001 C CNN
+F 1 "Earth" H 7400 5500 50  0001 C CNN
+F 2 "" H 7400 5650 50  0001 C CNN
+F 3 "" H 7400 5650 50  0001 C CNN
+	1    7400 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 5550 7400 5650
 $EndSCHEMATC

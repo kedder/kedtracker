@@ -18,8 +18,16 @@ flash: build-firmware
 debugger:
 	openocd -f openocd/stm32f1.cfg \
 	   -c init \
-	   -c targets \
-	   -c halt
+	   -c halt \
+	   -c targets
+
+.PHONY: gdb
+gdb:
+	arm-none-eabi-gdb \
+		-tui \
+		--eval-command "target remote localhost:3333" \
+		firmware/build/main.elf
+
 
 console:
 	#screen /dev/ttyUSB0 115200,echo
