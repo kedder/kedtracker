@@ -14,6 +14,18 @@ flash: build-firmware
 	   -c shutdown
 	@echo Flashing completed
 
+flash-setup: build-firmware
+	openocd -f openocd/stm32f1.cfg \
+	   -c init \
+	   -c targets \
+	   -c halt \
+	   -c "stm32f1x mass_erase 0" \
+	   -c "flash erase_check 0" \
+	   -c "flash write_bank 0 firmware/build/setup.bin 0" \
+	   -c "reset run" \
+	   -c shutdown
+	@echo Flashing completed
+
 .PHONY: debugger
 debugger:
 	openocd -f openocd/stm32f1.cfg \
@@ -42,7 +54,7 @@ firmware/makefile:
 
 .PHONY: build-firmware
 build-firmware: firmware
-	$(MAKE) -C firmware
+	$(MAKE) -C firmware all setup
 
 
 clean:
