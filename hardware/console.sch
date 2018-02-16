@@ -843,4 +843,8 @@ F 3 "" H 6350 6350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6350 6250 6350 6350
+Wire Wire Line
+	3450 6650 2250 6650
+Text HLabel 2250 6650 0    60   Input ~ 0
+RESET
 $EndSCHEMATC
