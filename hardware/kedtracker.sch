@@ -330,7 +330,7 @@ U 1 1 59B6EA7A
 P 1350 950
 F 0 "C1" H 1375 1050 50  0000 L CNN
 F 1 "330uF" H 1375 850 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:CP_Radial_D8.0mm_P3.80mm" H 1350 950 50  0001 C CNN
+F 2 "Capacitors_ThroughHole:CP_Radial_D6.3mm_P2.50mm" H 1350 950 50  0001 C CNN
 F 3 "" H 1350 950 50  0001 C CNN
 	1    1350 950 
 	-1   0    0    1   
@@ -1385,6 +1385,7 @@ F1 "console.sch" 60
 F2 "CON_INPUT" O L 8300 5750 60 
 F3 "CON_OUTPUT" I L 8300 5900 60 
 F4 "BT_PAIRED" O L 8300 5550 60 
+F5 "RESET" I L 8300 6050 60 
 $EndSheet
 Wire Wire Line
 	5600 4200 5600 4500
@@ -1518,4 +1519,8 @@ Wire Wire Line
 	10450 3000 10450 3150
 Text Label 2700 1450 2    40   ~ 0
 5V_OUT
+Wire Wire Line
+	7900 6050 8300 6050
+Text Label 7950 6050 0    40   ~ 0
+RESET
 $EndSCHEMATC
