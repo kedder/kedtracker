@@ -3,7 +3,7 @@
   (general
     (links 204)
     (no_connects 0)
-    (area 99.924999 43.314999 182.735001 100.075001)
+    (area 87.887521 32.75 201.83 105.240001)
     (thickness 1.6)
     (drawings 49)
     (tracks 1041)
@@ -15,8 +15,8 @@
   (page A4)
   (title_block
     (title "Ked Tracker")
-    (date 2017-12-16)
-    (rev 0.6)
+    (date 2018-02-24)
+    (rev 0.7)
     (comment 1 "PCB for HAMMOND-1593L enclosure")
     (comment 2 "Open Glider Network Tracker")
   )

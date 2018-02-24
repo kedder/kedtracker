@@ -39,8 +39,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 2
 Title "Console Input/Output and External Connectivity"
-Date "2017-12-17"
-Rev "0.6"
+Date "2018-02-24"
+Rev "0.7"
 Comp ""
 Comment1 "Open Glider Network Tracker"
 Comment2 ""
