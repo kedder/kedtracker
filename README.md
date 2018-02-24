@@ -46,3 +46,21 @@ Current schematics can be also downloaded in
 
 ![Schematic Page 1](/hardware/render/kedtracker-0.png?raw=true "Schematic Page 1")
 ![Schematic Page 2](/hardware/render/kedtracker-1.png?raw=true "Schematic Page 2")
+
+## Setting Up Development Environment
+
+You will need to install additional packages for development. Packages for
+ubuntu are specified here; other operating systems might have similar
+requirements.
+
+### Building Firmware and Flashing MCU
+
+```
+sudo apt install gcc-arm-none-eabi openocd picocom
+```
+
+### Developing Hardware
+
+```
+sudo apt install kicad
+```
