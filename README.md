@@ -57,6 +57,8 @@ requirements.
 
 ```
 sudo apt install gcc-arm-none-eabi openocd picocom
+sudo add-user `whoami` plugdev
+sudo add-user `whoami` dialout
 ```
 
 ### Developing Hardware
