@@ -1,3 +1,6 @@
 *.sublime*
+.vscode
+*.code-workspace
 *.fcstd1
+*.swp
 tmp
