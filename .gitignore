@@ -4,3 +4,4 @@
 *.fcstd1
 *.swp
 tmp
+venv
