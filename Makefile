@@ -38,7 +38,7 @@ gdb:
 	arm-none-eabi-gdb \
 		-tui \
 		--eval-command "target remote localhost:3333" \
-		firmware/build/main.elf
+		firmware/build/setup.elf
 
 
 console:
@@ -59,7 +59,28 @@ build-firmware: firmware
 
 clean:
 	$(MAKE) -C firmware clean
+	rm -rf venv
 
 .PHONY: schematics-png
 schematics-png:
 	$(MAKE) -C hardware/render
+
+
+# Python environment
+
+VENV_BIN=venv/bin
+PYTHON=$(VENV_BIN)/python
+
+venv:
+	virtualenv -p python3 venv
+
+.python-installed: python-requirements.txt | venv
+	$(VENV_BIN)/pip install -r python-requirements.txt
+	touch python-requirements.txt
+
+
+.PHONY: deploy
+deploy: .python-installed build-firmware
+	$(PYTHON) scripts/deploy.py
+
+
