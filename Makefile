@@ -60,6 +60,7 @@ build-firmware: firmware
 clean:
 	$(MAKE) -C firmware clean
 	rm -rf venv
+	rm .python-installed
 
 .PHONY: schematics-png
 schematics-png:
@@ -76,7 +77,7 @@ venv:
 
 .python-installed: python-requirements.txt | venv
 	$(VENV_BIN)/pip install -r python-requirements.txt
-	touch python-requirements.txt
+	touch .python-installed
 
 
 .PHONY: deploy
