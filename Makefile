@@ -2,6 +2,10 @@ all: firmware build-firmware schematics-png
 
 FIRMWARE_GIT = git@github.com:kedder/diy-tracker.git
 
+FIRMWARE_BUILD = firmware/build
+MAIN_BIN = $(FIRMWARE_BUILD)/main.bin
+SETUP_BIN = $(FIRMWARE_BUILD)/setup.bin
+
 flash: build-firmware
 	openocd -f openocd/stm32f1.cfg \
 	   -c init \
@@ -9,7 +13,7 @@ flash: build-firmware
 	   -c halt \
 	   -c "stm32f1x mass_erase 0" \
 	   -c "flash erase_check 0" \
-	   -c "flash write_bank 0 firmware/build/main.bin 0" \
+	   -c "flash write_bank 0 $(MAIN_BIN) 0" \
 	   -c "reset run" \
 	   -c shutdown
 	@echo Flashing completed
@@ -21,10 +25,13 @@ flash-setup: build-firmware
 	   -c halt \
 	   -c "stm32f1x mass_erase 0" \
 	   -c "flash erase_check 0" \
-	   -c "flash write_bank 0 firmware/build/setup.bin 0" \
+	   -c "flash write_bank 0 $(SETUP_BIN) 0" \
 	   -c "reset run" \
 	   -c shutdown
 	@echo Flashing completed
+
+flash-usb: build-firmware
+	stm32flash -w $(MAIN_BIN) /dev/ttyUSB0
 
 .PHONY: debugger
 debugger:
