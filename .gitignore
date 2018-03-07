@@ -6,3 +6,5 @@
 tmp
 venv
 .python-installed
+box/production/*.svg
+box/production/.generated

@@ -1,0 +1,20 @@
+Serial No,Aircraft Id,Hardware Version,Software Version,Notes
+1,338921,0.2,,Initial prototype
+2,2ADD37,0.3,,
+3,2E8B36,0.3,,No MAX232
+4,2ED121,0.5,,Prototype with BT and USB
+5,2E466A,0.6,,F103CB MCU
+6,26CC5B,0.6,,
+7,54773E,0.6,,
+8,29B43F,0.6,,
+9,073B55,0.6,,
+10,204329,0.6,,
+11,3E3813,0.6,,
+12,30DC01,0.6,,
+13,3BDA5E,0.7,,
+14,313115,0.7,,
+15,07411F,0.7,,
+16,317111,0.7,,F103CB MCU; D8 installed incorrectly
+17,286932,0.7,,
+18,3CA966,0.7,,
+19,1A6B16,0.7,,

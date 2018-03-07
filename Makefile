@@ -91,4 +91,9 @@ venv:
 deploy: .python-installed build-firmware
 	$(PYTHON) scripts/deploy.py
 
+.PHONY: labels
+labels: .python-installed box/production/.generated
 
+box/production/.generated: prodlist.csv
+	$(PYTHON) scripts/makelabels.py box/labels-%s.svg prodlist.csv box/production
+	touch box/production/.generated
