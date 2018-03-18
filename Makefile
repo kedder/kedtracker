@@ -45,7 +45,7 @@ gdb:
 	arm-none-eabi-gdb \
 		-tui \
 		--eval-command "target remote localhost:3333" \
-		firmware/build/setup.elf
+		firmware/build/main.elf
 
 
 console:
@@ -97,3 +97,11 @@ labels: .python-installed box/production/.generated
 box/production/.generated: prodlist.csv
 	$(PYTHON) scripts/makelabels.py box/labels-%s.svg prodlist.csv box/production
 	touch box/production/.generated
+
+.PHONY: package
+package: build-firmware | packages
+	bootloader/packagefw.py --version `cat fwversion.txt` \
+		$(MAIN_BIN) packages/kedtracker-`cat fwversion.txt`.fw
+
+packages:
+	mkdir packages
