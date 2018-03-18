@@ -23,7 +23,7 @@ Examples:
 
 Set high transmission power:
 ```
-$POGNS,,,,,20,
+$POGNS,TxPower=20
 ```
 
 ## Bluetooth Dongles
