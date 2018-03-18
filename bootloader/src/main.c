@@ -1,3 +1,21 @@
+/*
+ * Bootloader for STM32F103
+ * Copyright (C) 2018 Andrey Lebedev
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
 #include <stdbool.h>
 
 #include "stm32f10x.h"
@@ -9,7 +27,7 @@
 #include "crc32.h"
 #include "firmware.h"
 
-static FATFS       FatFs;                                         // FatFS object for the file system (FAT)
+static FATFS FatFs;  // FatFS object for the file system (FAT)
 
 typedef  void (*pFunction)(void);
 
@@ -32,17 +50,6 @@ static void RunApp() {
   while (1) continue;
 }
 
-bool LedSet(bool on) {
-  if (on) {
-    HAL_LedOn();
-  }
-  else {
-    HAL_LedOff();
-  }
-  return !on;
-}
-
-
 int main(void) {
   FRESULT ErrFile;
 
@@ -61,17 +68,11 @@ int main(void) {
 
   static FoundFirmware found;
   FirmwareStatus fwstat = FW_FindFirmware(&found);
-
   if (fwstat != FW_FOUND) {
     RunApp();
     return 3;
   }
 
-  // Print("Found firmware version ");
-  // FW_PrintVersion(&found.header);
-  // Print(" in ");
-  // Print(found.fileinfo.fname);
-  // PrintLn(": flashing");
   FW_FlashFirmware(&found);
 
   PrintLn("Storing flashed version");

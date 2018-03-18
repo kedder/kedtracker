@@ -1,3 +1,21 @@
+/*
+ * Bootloader for STM32F103
+ * Copyright (C) 2018 Andrey Lebedev
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
 #include <string.h>
 
 #include "stm32f10x_flash.h"
@@ -58,7 +76,7 @@ static bool isUpgradeable(FirmwareHeader *header) {
   }
 
   // Make sure the version is higher
-  int16_t fwversion = (header->versionMajor << 8) + header->versionMinor; 
+  int16_t fwversion = (header->versionMajor << 8) + header->versionMinor;
   int16_t storedVersion = (storedHeader->versionMajor << 8) + storedHeader->versionMinor;
 
   if (fwversion == 0) {
@@ -66,13 +84,13 @@ static bool isUpgradeable(FirmwareHeader *header) {
     return true;
   }
 
-  // If variant is different, upgrade despite version is the same 
+  // If variant is different, upgrade despite version is the same
   bool sameVariant = iseq(header->variant, storedHeader->variant, sizeof(header->variant));
 
   if (storedVersion == fwversion && !sameVariant) {
     Print("different variant, ");
     return true;
-  } 
+  }
   if (fwversion <= storedVersion) {
     Print("older version, ");
     return false;
@@ -222,15 +240,15 @@ void FW_FlashFirmware(FoundFirmware *fw) {
 
 void FW_SaveHeader(FirmwareHeader *header) {
   FLASH_Unlock();
-  FLASH_ErasePage(BOOT_STORAGE_ADDRESS);  
+  FLASH_ErasePage(BOOT_STORAGE_ADDRESS);
   uint32_t *src = (uint32_t *)header;
 
   uint32_t curAddr = BOOT_STORAGE_ADDRESS;
   for (uint32_t i=0; i < sizeof(FirmwareHeader) / sizeof(int32_t); i++) {
-    FLASH_ProgramWord(curAddr, src[i]);    
+    FLASH_ProgramWord(curAddr, src[i]);
     curAddr += sizeof(int32_t);
-  } 
-  FLASH_Lock();  
+  }
+  FLASH_Lock();
 }
 
 void FW_PrintCurrentVersion(void) {
