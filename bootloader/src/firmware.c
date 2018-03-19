@@ -220,7 +220,7 @@ void FW_FlashFirmware(FoundFirmware *fw) {
   // Erase the flash
   HAL_LedOn();
   FLASH_Unlock();
-  uint8_t toErase = NUM_OF_PAGES - MAIN_PROGRAM_PAGE_NUMBER;
+  uint8_t toErase = NUM_OF_APPEXE_PAGES;
   for(uint8_t i = 0; i < toErase ; i++) {
     FLASH_ErasePage(MAIN_PROGRAM_START_ADDRESS + i * FLASH_PAGE_SIZE);
   }

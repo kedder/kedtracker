@@ -1,10 +1,11 @@
 _eram = ORIGIN(ram) + LENGTH(ram);
 
 _start_rom = ORIGIN(rom);
-_start_rom_app = ORIGIN(rom_app);
 _start_rom_bootvar = ORIGIN(rom_bootvar);
+_start_rom_appexe = ORIGIN(rom_appexe);
 _length_rom = LENGTH(rom);
 _length_rom_app = LENGTH(rom_app);
+_length_rom_appexe = LENGTH(rom_appexe);
 
 SECTIONS
 {

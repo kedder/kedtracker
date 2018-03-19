@@ -24,15 +24,17 @@
 
 /* Memory map from .ld scripts */
 extern uint32_t _start_rom;
-extern uint32_t _start_rom_app;
+extern uint32_t _start_rom_appexe;
 extern uint32_t _start_rom_bootvar;
 extern uint32_t _length_rom;
 extern uint32_t _length_rom_app;
+extern uint32_t _length_rom_appexe;
 
-#define MAIN_PROGRAM_START_ADDRESS (uint32_t)&_start_rom_app
+#define MAIN_PROGRAM_START_ADDRESS (uint32_t)&_start_rom_appexe
 #define BOOT_STORAGE_ADDRESS (uint32_t)&_start_rom_bootvar
 #define FLASH_PAGE_SIZE 1024
 #define NUM_OF_PAGES (uint32_t)&_length_rom / FLASH_PAGE_SIZE
+#define NUM_OF_APPEXE_PAGES (uint32_t)&_length_rom_appexe / FLASH_PAGE_SIZE
 #define MAIN_PROGRAM_PAGE_NUMBER ((uint32_t)&_start_rom_app - (uint32_t)&_start_rom) / FLASH_PAGE_SIZE
 
 void HAL_SetupHardware(void);
