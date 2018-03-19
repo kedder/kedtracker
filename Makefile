@@ -2,6 +2,8 @@ all: firmware build-firmware schematics-png
 
 FIRMWARE_GIT = git@github.com:kedder/diy-tracker.git
 
+BOOTLOADER_BUILD = bootloader/build
+BOOTLOADER_BIN = $(BOOTLOADER_BUILD)/bootloader.bin
 FIRMWARE_BUILD = firmware/build
 MAIN_BIN = $(FIRMWARE_BUILD)/main.bin
 SETUP_BIN = $(FIRMWARE_BUILD)/setup.bin
@@ -13,7 +15,8 @@ flash: build-firmware
 	   -c halt \
 	   -c "stm32f1x mass_erase 0" \
 	   -c "flash erase_check 0" \
-	   -c "flash write_bank 0 $(MAIN_BIN) 0" \
+	   -c "flash write_bank 0 $(BOOTLOADER_BIN) 0x0" \
+	   -c "flash write_bank 0 $(MAIN_BIN) 0x2000" \
 	   -c "reset run" \
 	   -c shutdown
 	@echo Flashing completed
