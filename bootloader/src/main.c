@@ -55,7 +55,11 @@ int main(void) {
 
   HAL_SetupHardware();
 
-  PrintLn("** Ked Tracker Bootloader **");
+  Print("** ");
+  Print(BOOTLOADER_NAME);
+  Print(" version ");
+  Print(BOOTLOADER_VERSION);
+  PrintLn(" **");
   Print("Installed application version: ");
   FW_PrintCurrentVersion();
   PrintLn("");

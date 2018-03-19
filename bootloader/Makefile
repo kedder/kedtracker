@@ -1,3 +1,6 @@
+BOOTLOADER_NAME=Ked Tracker Bootloader
+BOOTLOADER_VERSION=1.0
+
 PATHB = build/
 PATHD = $(PATHB)depends/
 PATHO = $(PATHB)objs/
@@ -33,6 +36,8 @@ LDSCRIPT := ld/stm32f103c8.ld
 
 CFLAGS := -c -Os -Wall -Wundef -fdata-sections -ffunction-sections
 CFLAGS += -fno-common -g -mcpu=cortex-m3 -mthumb
+CFLAGS += -DBOOTLOADER_VERSION='"$(BOOTLOADER_VERSION)"'
+CFLAGS += -DBOOTLOADER_NAME='"$(BOOTLOADER_NAME)"'
 # CFLAGS += -DSTM32F10X_MD
 CFLAGS += -Isrc
 CFLAGS += -Ilib/cmsis_boot

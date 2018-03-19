@@ -94,7 +94,9 @@ static bool isUpgradeable(FirmwareHeader *header) {
     return true;
   }
   if (fwversion <= storedVersion) {
-    Print("older version, ");
+    Print("not newer: ");
+    printVersion(header);
+    Print(", ");
     return false;
   }
   Print("new version");
