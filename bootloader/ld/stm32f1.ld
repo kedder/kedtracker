@@ -33,18 +33,18 @@ SECTIONS
 		*(.rodata*)
 		
 		KEEP(*(.eh_fram e*))
-	} > rom_boot 
+	} > rom_bootexe
 	
 	.ARM.extab : 
 	{
 		*(.ARM.extab* .gnu.linkonce.armextab.*)
-	} > rom_boot 
+	} > rom_bootexe
 	
 	__exidx_start = .;
 	.ARM.exidx :
 	{
 		*(.ARM.exidx* .gnu.linkonce.armexidx.*)
-	} > rom_boot 
+	} > rom_bootexe
 	__exidx_end = .;
 	__etext = .;
 	
