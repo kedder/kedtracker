@@ -29,6 +29,8 @@
 
 static uint8_t buffer[512];
 static uint32_t flashbuffer[128];
+static FIL file;
+
 
 static bool iseq(const char *str1, const char *str2, int len) {
   for (int i = 0; i < len; i++) {
@@ -150,16 +152,16 @@ FirmwareStatus FW_FindFirmware(FoundFirmware *found) {
     }
 
     // Looks like a firmware. Open a file and see what's inside
-    err=f_open(&found->file, found->fileinfo.fname, FA_READ);
+    err=f_open(&file, found->fileinfo.fname, FA_READ);
     if (err) {
       result = FW_CANNOT_OPEN;
       break;
     }
 
     // Read the header
-    f_read(&found->file, &found->header, sizeof(FirmwareHeader), &read);
+    f_read(&file, &found->header, sizeof(FirmwareHeader), &read);
     if (!isSupported(&found->header)) {
-      f_close(&found->file);
+      f_close(&file);
       continue;
     }
 
@@ -170,12 +172,12 @@ FirmwareStatus FW_FindFirmware(FoundFirmware *found) {
     if (!isUpgradeable(&found->header)) {
       // Unknown format
       PrintLn("not upgradeable");
-      f_close(&found->file);
+      f_close(&file);
       continue;
     }
 
-    bool crcMatches = checkCRC(&found->header, &found->file);
-    f_close(&found->file);
+    bool crcMatches = checkCRC(&found->header, &file);
+    f_close(&file);
     // Make sure CRC matches
     if (!crcMatches) {
       // CRC mismatch! Bail out
@@ -186,13 +188,6 @@ FirmwareStatus FW_FindFirmware(FoundFirmware *found) {
 
     // Looks like all checks passed: we found the firmware we can load
     // Reopen the file and seek to the beginning of the firware blob
-    err=f_open(&found->file, found->fileinfo.fname, FA_READ);
-    if (err) {
-      PrintLn("cannot open");
-      result = FW_CANNOT_OPEN;
-      break;
-    }
-    f_read(&found->file, &found->header, sizeof(FirmwareHeader), &read);
     PrintLn("upgrading");
     result = FW_FOUND;
     break;
@@ -202,14 +197,24 @@ FirmwareStatus FW_FindFirmware(FoundFirmware *found) {
     return result;
 }
 
-
 void FW_FlashFirmware(FoundFirmware *fw) {
-  uint32_t bytesLeft = fw->file.fsize - sizeof(FirmwareHeader);
+  FRESULT err;
+  UINT read;
+
+  // Open a file and move read position to the start of firmware body
+  err=f_open(&file, fw->fileinfo.fname, FA_READ);
+  if (err) {
+    PrintLn("cannot open");
+    return;
+  }
+  f_read(&file, &fw->header, sizeof(FirmwareHeader), &read);
+  uint32_t bytesLeft = file.fsize - sizeof(FirmwareHeader);
 
   Print("Flashing firmware version ");
   printVersion(&fw->header);
   Print(" from ");
   PrintLn(fw->fileinfo.fname);
+
   // Erase the flash
   HAL_LedOn();
   FLASH_Unlock();
@@ -219,11 +224,10 @@ void FW_FlashFirmware(FoundFirmware *fw) {
   }
 
   // Write the firmware
-  UINT read = 0;
   uint32_t currentAddress = MAIN_PROGRAM_START_ADDRESS;
   while (bytesLeft) {
     uint32_t toread = bytesLeft > sizeof(flashbuffer) ? sizeof(flashbuffer) : bytesLeft;
-    f_read(&fw->file, flashbuffer, toread, &read);
+    f_read(&file, flashbuffer, toread, &read);
     for (uint32_t i = 0; i < 128; i++) {
       FLASH_ProgramWord(currentAddress, flashbuffer[i]);
       currentAddress += sizeof(uint32_t);
@@ -235,7 +239,7 @@ void FW_FlashFirmware(FoundFirmware *fw) {
   FLASH_Lock();
   HAL_LedOff();
 
-  f_close(&fw->file);
+  f_close(&file);
 }
 
 void FW_SaveHeader(FirmwareHeader *header) {

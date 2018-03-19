@@ -51,7 +51,6 @@ typedef struct {
 typedef struct {
     FirmwareHeader header;
     FILINFO fileinfo;
-    FIL file;
 } FoundFirmware;
 
 FirmwareStatus FW_FindFirmware(FoundFirmware *found);
