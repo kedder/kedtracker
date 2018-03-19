@@ -27,6 +27,7 @@ AS := arm-none-eabi-as
 OBJCOPY := arm-none-eabi-objcopy
 OBJDUMP := arm-none-eabi-objdump
 GDB := arm-none-eabi-gdb
+SIZE := arm-none-eabi-size
 
 LDSCRIPT := ld/stm32f103c8.ld
 
@@ -60,27 +61,30 @@ all: release
 .PHONY: release
 release: $(BUILD_PATHS) $(IMAGE)
 
-%.bin %.hex: %.elf
-	$(OBJCOPY) -Obinary $(*).elf $(*).bin
-	$(OBJCOPY) -Oihex $(*).elf $(*).hex
+%.bin: %.elf
+	@echo "> creating BIN: $@"
+	@$(OBJCOPY) -Obinary $(*).elf $(*).bin
+
+%.hex: %.elf
+	@echo "> creating HEX: $@"
+	@$(OBJCOPY) -Oihex $(*).elf $(*).hex
 
 %.elf %.map: $(OBJS) $(LDSCRIPT)
-	$(LD) $(LDFLAGS) $(OBJS) $(LIBS) -o $(*).elf
+	@echo "> linking $@"
+	@$(LD) $(LDFLAGS) $(OBJS) $(LIBS) -o $(*).elf
+	@$(SIZE) $(*).elf
 
 $(PATHO)%.o:: $(PATHS)%.c
-	$(CC) $(CFLAGS) $< -o $@
-
-$(PATHO)%.o:: $(PATHS)%.cpp
-	$(CC) $(CFLAGS) $< -o $@
+	@echo "+ cc $<"
+	@$(CC) $(CFLAGS) $< -o $@
 
 $(PATHO)%.o:: $(PATHL)%.c
-	$(CC) $(CFLAGS) $< -o $@
-
-$(PATHO)%.o:: $(PATHL)%.cpp
-	$(CC) $(CFLAGS) $< -o $@
+	@echo "+ cc $<"
+	@$(CC) $(CFLAGS) $< -o $@
 
 $(BUILD_PATHS):
-	$(MKDIR) $@
+	@echo "> creating $@"
+	@$(MKDIR) $@
 
 .PHONY: clean
 clean:
