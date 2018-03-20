@@ -9,94 +9,76 @@ from termcolor import cprint, colored
 
 PORT = '/dev/ttyUSB0'
 
-BUILD_DIR = 'firmware/build'
-SETUP_BIN = os.path.join(BUILD_DIR, 'setup.bin')
-MAIN_BIN = os.path.join(BUILD_DIR, 'main.bin')
+APP_START_ADDR = '0x08002000'
+APP_START_PAGE = '8'
+BOOTLOADER_BUILD_DIR = 'bootloader/build'
+APP_BUILD_DIR = 'firmware/build'
+BOOTLOADER_BIN = os.path.join(BOOTLOADER_BUILD_DIR, 'bootloader.bin')
+SETUP_BIN = os.path.join(APP_BUILD_DIR, 'setup.bin')
+MAIN_BIN = os.path.join(APP_BUILD_DIR, 'main.bin')
 
-FLASH_SETUP_CMD = ['stm32flash', '-w', SETUP_BIN, PORT]
-FLASH_MAIN_CMD = ['stm32flash', '-w', MAIN_BIN, PORT]
-RUN_CMD = ['stm32flash', '-g', '0x0', PORT]
+FLASH_BOOTLOADER_CMD = ['stm32flash', '-w', BOOTLOADER_BIN, PORT]
+FLASH_SETUP_CMD = ['stm32flash', '-w', SETUP_BIN, '-s', '8', PORT]
+RUN_CMD = ['stm32flash', '-g', APP_START_ADDR, PORT]
 
 FEATURE_NAMES = {
+    'bootloader': 'Bootloader running',
+    'flashing': 'Firmware flashing',
+    'aircraftid': 'Aircraft Id',
+    'setupdone': 'Setup Completed',
     'sdcard': 'SD Card',
+    'txpower': 'TX Power Configured',
     'rf': 'RF Chip',
     'baro': 'Barometric Sensor',
     'gps': 'GPS'
 }
 
 FEATURE_MARKERS = {
-    'sdcard': 'Config file TRACKER.CFG:',
-    'rf': 'TaskRF: v24',
-    'baro': 'BMP280:  @76',
-    'gps': '$GPGSA'
+    'bootloader': r'Ked Tracker Bootloader',
+    'flashing': r'Flashing firmware',
+    'aircraftid': r'Parameters initialized: \d:\d:([0-9A-F]{6})',
+    'setupdone': r'Setup completed!',
+    'sdcard': r'Config file TRACKER.CFG:',
+    'txpower': r'RFM69HW/\+20dBm',
+    'rf': r'TaskRF: (v24)',
+    'baro': r'BMP280:  @76',
+    'gps': r'\$GPGSA'
 }
 
 class Failure(Exception):
     pass
 
+def flash_bootloader():
+    cprint("Flashing bootloader...", 'blue')
+
+    res = subprocess.call(FLASH_BOOTLOADER_CMD)
+    if res:
+        raise Failure("Flashing bootloader failed!")
+
 def flash_setup():
+    cprint("Flashing setup firmware...", 'blue')
     res = subprocess.call(FLASH_SETUP_CMD)
     if res:
         raise Failure("Flashing setup firmware failed!")
+    cprint("Starting setup firmware...", 'blue')
     res = subprocess.call(RUN_CMD)
     if res:
         raise Failure("Starting firmware failed!")
 
-def flash_main():
-    res = subprocess.call(FLASH_MAIN_CMD)
-    if res:
-        raise Failure("Flashing main firmware failed!")
-
-def detect_aircrat_id():
-    print(colored("Detecting Aircraft Id... ", 'blue'), end='', flush=True)
-    aircraft_id = None
-    log = []
-    with serial.Serial(PORT, 115200, timeout=1) as ser:
-        for attempt in range(30):
-            line = ser.readline()
-
-            try:
-                line = line.decode('utf-8')
-            except UnicodeDecodeError:
-                continue
-
-            log.append(line)
-            # check for aircraft id
-            m = re.match(r'.*Parameters initialized: \d:\d:([0-9A-F]{6}).*',
-                         line)
-            if m:
-                aircraft_id = m.group(1)
-                continue
-
-            # check for success message
-            m = re.match(r'.*Setup completed!.*', line)
-            if aircraft_id and m:
-                break
-        else:
-            print()
-            cprint("Setup failed:", 'red')
-            for line in log:
-                print("   %s" % line, end='')
-            print()
-            raise Failure("Setup failed")
-
-    cprint(aircraft_id, 'green')
-    return aircraft_id
 
 def detect_features():
+    features = {}
     with serial.Serial(PORT, 115200, timeout=0) as ser:
-        # Start the firmware
-        cprint('Starting firmware...', 'blue')
-        res = subprocess.call(RUN_CMD)
-        if res:
-            raise Failure("Starting firmware failed!")
-
         cprint('Detecting features...', 'blue')
         to_detect = set(FEATURE_MARKERS.keys())
 
         attempt = 50
         while attempt:
-            line = ser.readline().decode()
+            try:
+                line = ser.readline().decode()
+            except UnicodeDecodeError:
+                continue
+
             if not line:
                 time.sleep(0.1)
                 continue
@@ -104,7 +86,10 @@ def detect_features():
             attempt -= 1
             print(">", colored(line.strip(), 'white'))
             for feature, marker in FEATURE_MARKERS.items():
-                if marker in line:
+                match = re.search(marker, line)
+                if match:
+                    if match.groups():
+                        features[feature] = match.groups()
                     if feature in to_detect:
                         to_detect.remove(feature)
                     cprint("  Detected: %s" % FEATURE_NAMES[feature], 'green')
@@ -117,10 +102,14 @@ def detect_features():
             raise Failure("Not all features detected")
 
     cprint("All features detected", 'blue')
+    return features
 
 
-def report_success(aircraft_id):
+def report_success(features):
     print()
+
+    aircraft_id, = features['aircraftid']
+
     print(colored('Your aircraft Id:', 'blue'),
           colored(aircraft_id, 'green', attrs=['bold']))
     cprint("Success!", 'blue')
@@ -136,21 +125,12 @@ def welcome():
           end='')
     input('')
 
-def ask_to_reset():
-    print(colored("Reset device and press", 'blue'),
-          colored("Enter", attrs=['bold']),
-          '',
-          end='')
-    input('')
-
 def main():
     welcome()
+    flash_bootloader()
     flash_setup()
-    aircraft_id = detect_aircrat_id()
-    ask_to_reset()
-    flash_main()
-    detect_features()
-    report_success(aircraft_id)
+    features = detect_features()
+    report_success(features)
 
 if __name__ == '__main__':
     try:
