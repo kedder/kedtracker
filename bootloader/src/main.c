@@ -66,6 +66,7 @@ int main(void) {
 
   ErrFile=f_mount(&FatFs, "", 1);
   if (ErrFile) {
+    PrintLn("No SD Card.");
     RunApp();
     return 1;
   }
