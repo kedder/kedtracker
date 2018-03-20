@@ -28,7 +28,8 @@ flash-setup: build-firmware
 	   -c halt \
 	   -c "stm32f1x mass_erase 0" \
 	   -c "flash erase_check 0" \
-	   -c "flash write_bank 0 $(SETUP_BIN) 0" \
+	   -c "flash write_bank 0 $(BOOTLOADER_BIN) 0x0" \
+	   -c "flash write_bank 0 $(SETUP_BIN) 0x2000" \
 	   -c "reset run" \
 	   -c shutdown
 	@echo Flashing completed
