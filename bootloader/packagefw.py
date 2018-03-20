@@ -7,7 +7,7 @@ import argparse
 import zlib
 import io
 
-FW_MARKER = "KEDTR"
+FW_MARKER = "KEDT"
 FORMAT_REV = 1
 STM32_BYTEORDER = 'little'
 
@@ -60,21 +60,21 @@ def package(inputfname: str, outputfname: str, version: str,
     with open(outputfname, 'wb') as f:
         # Write the format defined in firmware.h
         # FirmwareHeader.marker
-        f.write('{0:\0<6}'.format(FW_MARKER).encode())
+        f.write('{0:\0<5}'.format(FW_MARKER).encode())
         # FirmwareHeader.format
         f.write(FORMAT_REV.to_bytes(1, STM32_BYTEORDER))
         # FirmwareHeader.versionMajor
         f.write(version_major.to_bytes(1, STM32_BYTEORDER))
         # FirmwareHeader.versionMinor
         f.write(version_minor.to_bytes(1, STM32_BYTEORDER))
-        # FirmwareHeader.reserved
-        f.write(b'\0' * 3)
         # FirmwareHeader.versionStr
         f.write('{0:\0<8}'.format(version).encode())
         # FirmwareHeader.variant
         f.write('{0:\0<8}'.format(variant or '').encode())
         # FirmwareHeader.bodyCrc
         f.write(bin_crc32.to_bytes(4, STM32_BYTEORDER))
+        # FirmwareHeader.reserved
+        f.write(b'\0' * 4)
 
         # Finally we can write the firmware itself
         f.write(bin_contents)

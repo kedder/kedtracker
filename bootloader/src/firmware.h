@@ -26,7 +26,7 @@
 
 #include "crc32.h"
 
-#define FW_MARKER "KEDTR"
+#define FW_MARKER "KEDT"
 
 typedef enum {
     FW_FOUND=0,
@@ -38,14 +38,14 @@ typedef enum {
 } FirmwareStatus;
 
 typedef struct {
-    char marker[6];
+    char marker[5];
     uint8_t format;
     uint8_t versionMajor;
     uint8_t versionMinor;
-    uint8_t reserved[3];
     char versionStr[8];
     char variant[8];
     uint32_t bodyCrc;
+    uint8_t reserved[4];
 } FirmwareHeader;
 
 typedef struct {
