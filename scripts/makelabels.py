@@ -31,7 +31,10 @@ def parse_prod_list(prodlist_fname):
 
 def render_labels(entry, template, outputdir):
     # Find template for the hw version
-    tfilename = template % entry.hw_ver
+    if '%s' in template:
+        tfilename = template % entry.hw_ver
+    else:
+        tfilename = template
     if not os.path.exists(tfilename):
         cprint("Warning: no template for version %s: %s" % (entry.hw_ver, tfilename), 'red')
         return
@@ -39,7 +42,7 @@ def render_labels(entry, template, outputdir):
     with open(tfilename) as f:
         tpl = string.Template(f.read())
 
-    paddedsn = "%05d" % int(entry.sn)
+    paddedsn = "%04d" % int(entry.sn)
     data = {
         'sn': paddedsn,
         'aid': entry.aircraft_id,

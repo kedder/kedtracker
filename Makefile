@@ -100,6 +100,7 @@ labels: .python-installed box/production/.generated
 
 box/production/.generated: prodlist.csv
 	$(PYTHON) scripts/makelabels.py box/labels-%s.svg prodlist.csv box/production
+	$(PYTHON) scripts/makelabels.py box/manual-sheet.svg prodlist.csv box/production
 	touch box/production/.generated
 
 .PHONY: package
