@@ -107,9 +107,10 @@ flash: release
 	    -c "stm32f1x mass_erase 0" \
 	    -c "flash erase_check 0" \
 		-c "flash write_bank 0 $(IMAGE) 0" \
-		-c "verify_image $(IMAGE)" \
-		-c "reset" \
-		-c "exit"
+		-c "reset run" \
+		-c "shutdown"
+
+# -c "verify_image $(IMAGE)" 
 
 .PHONY: debugger
 debugger:
