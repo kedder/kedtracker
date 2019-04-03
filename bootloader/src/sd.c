@@ -297,7 +297,7 @@ DRESULT disk_read (
   for(UINT i=0; i<count; i++)
   { if(sd_read_sector(sector, buff, sector_size) ) return RES_ERROR;
     if(card_type==0) sector += sector_size;
-                     sector += 1;
+    sector += 1;
     buff+=sector_size; }
 
   return RES_OK; }
