@@ -84,7 +84,7 @@ VENV_BIN=venv/bin
 PYTHON=$(VENV_BIN)/python
 
 venv:
-	virtualenv -p python3 venv
+	python3 -m venv venv
 
 .python-installed: python-requirements.txt | venv
 	$(VENV_BIN)/pip install -r python-requirements.txt
