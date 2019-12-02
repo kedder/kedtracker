@@ -30,7 +30,8 @@ FEATURE_NAMES = {
     'txpower': 'TX Power Configured',
     'rf': 'RF Chip',
     'baro': 'Barometric Sensor',
-    'gps': 'GPS'
+    'gps': 'GPS',
+    'flashsize': 'Flash Size'
 }
 
 FEATURE_MARKERS = {
@@ -42,11 +43,13 @@ FEATURE_MARKERS = {
     'txpower': r'RFM69HW/\+20dBm',
     'rf': r'TaskRF: (v24)',
     'baro': r'BMP280:  @76',
-    'gps': r'\$GPGSA'
+    'gps': r'\$GPGSA',
+    'flashsize': r'TaskCTRL.*(64|128)kB'
 }
 
 class Failure(Exception):
     pass
+
 
 def flash_bootloader():
     cprint("Flashing bootloader...", 'blue')
@@ -54,6 +57,7 @@ def flash_bootloader():
     res = subprocess.call(FLASH_BOOTLOADER_CMD)
     if res:
         raise Failure("Flashing bootloader failed!")
+
 
 def flash_setup():
     cprint("Flashing setup firmware...", 'blue')
@@ -109,7 +113,9 @@ def report_success(features):
     print()
 
     aircraft_id, = features['aircraftid']
+    flash_size, = features['flashsize']
 
+    print(colored('Flash Size: %skB' % flash_size, 'blue'))
     print(colored('Your aircraft Id:', 'blue'),
           colored(aircraft_id, 'green', attrs=['bold']))
     cprint("Success!", 'blue')
