@@ -4,3 +4,5 @@ _autosave*
 *.bak
 *-cache.lib
 *.bck
+rescue-backup
+fp-info-cache

@@ -1,39 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:stm32
-LIBS:kedtracker
-LIBS:switches
-LIBS:kedder
+EESchema Schematic File Version 4
 LIBS:kedtracker-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -48,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MAX232 U2
+L kedtracker-rescue:MAX232 U2
 U 1 1 59FF8DDB
 P 3700 2350
 F 0 "U2" H 3400 3450 60  0000 R CNN
@@ -61,7 +28,7 @@ $EndComp
 Text GLabel 3700 1050 1    60   Input ~ 0
 3.3V
 $Comp
-L Earth #PWR030
+L kedtracker-rescue:Earth #PWR030
 U 1 1 59FF8DE3
 P 3700 3550
 F 0 "#PWR030" H 3700 3300 50  0001 C CNN
@@ -72,7 +39,7 @@ F 3 "" H 3700 3550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C21
+L kedtracker-rescue:C_Small C21
 U 1 1 59FF8DE9
 P 4600 1600
 F 0 "C21" H 4610 1670 50  0000 L CNN
@@ -83,7 +50,7 @@ F 3 "" H 4600 1600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C19
+L kedtracker-rescue:C_Small C19
 U 1 1 59FF8DF4
 P 2650 1600
 F 0 "C19" H 2660 1670 50  0000 L CNN
@@ -94,7 +61,7 @@ F 3 "" H 2650 1600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C22
+L kedtracker-rescue:C_Small C22
 U 1 1 59FF8DFF
 P 4750 1950
 F 0 "C22" V 4800 2000 50  0000 L CNN
@@ -105,7 +72,7 @@ F 3 "" H 4750 1950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C_Small C23
+L kedtracker-rescue:C_Small C23
 U 1 1 59FF8E06
 P 4750 2250
 F 0 "C23" V 4800 2300 50  0000 L CNN
@@ -116,7 +83,7 @@ F 3 "" H 4750 2250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Earth #PWR031
+L kedtracker-rescue:Earth #PWR031
 U 1 1 59FF8E0E
 P 5050 2300
 F 0 "#PWR031" H 5050 2050 50  0001 C CNN
@@ -127,7 +94,7 @@ F 3 "" H 5050 2300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L RJ45 J4
+L kedtracker-rescue:RJ45 J4
 U 1 1 59FF8E19
 P 5750 1600
 F 0 "J4" H 5950 2100 50  0000 C CNN
@@ -138,7 +105,7 @@ F 3 "" H 5750 1600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Earth #PWR032
+L kedtracker-rescue:Earth #PWR032
 U 1 1 59FF8E2D
 P 6300 1250
 F 0 "#PWR032" H 6300 1000 50  0001 C CNN
@@ -149,7 +116,7 @@ F 3 "" H 6300 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Earth #PWR033
+L kedtracker-rescue:Earth #PWR033
 U 1 1 59FF8E33
 P 5400 2150
 F 0 "#PWR033" H 5400 1900 50  0001 C CNN
@@ -160,7 +127,7 @@ F 3 "" H 5400 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +12V #PWR034
+L kedtracker-rescue:+12V #PWR034
 U 1 1 59FF8E3C
 P 6100 2150
 F 0 "#PWR034" H 6100 2000 50  0001 C CNN
@@ -171,7 +138,7 @@ F 3 "" H 6100 2150 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Earth #PWR035
+L kedtracker-rescue:Earth #PWR035
 U 1 1 59FF8E4B
 P 5800 2150
 F 0 "#PWR035" H 5800 1900 50  0001 C CNN
@@ -184,7 +151,7 @@ $EndComp
 Text GLabel 5900 2050 3    60   Input ~ 0
 3.3V
 $Comp
-L C_Small C20
+L kedtracker-rescue:C_Small C20
 U 1 1 59FF8E6F
 P 3900 1050
 F 0 "C20" H 3910 1120 50  0000 L CNN
@@ -195,7 +162,7 @@ F 3 "" H 3900 1050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Earth #PWR036
+L kedtracker-rescue:Earth #PWR036
 U 1 1 59FF8E78
 P 4100 1050
 F 0 "#PWR036" H 4100 800 50  0001 C CNN
@@ -206,7 +173,7 @@ F 3 "" H 4100 1050 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L D_Small D6
+L kedtracker-rescue:D_Small D6
 U 1 1 59FF8EA1
 P 2200 2850
 F 0 "D6" H 2150 2800 50  0000 L TNN
@@ -217,7 +184,7 @@ F 3 "" V 2200 2850 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L R_Small R14
+L kedtracker-rescue:R_Small R14
 U 1 1 59FF8EA9
 P 2200 2650
 F 0 "R14" V 2100 2600 50  0000 L CNN
@@ -232,7 +199,7 @@ CON_INPUT
 Text HLabel 1400 4650 0    60   Input ~ 0
 CON_OUTPUT
 $Comp
-L CH340G U3
+L kedtracker-rescue:CH340G U3
 U 1 1 59FFA19D
 P 9000 1800
 F 0 "U3" H 8850 2500 60  0000 C CNN
@@ -243,7 +210,7 @@ F 3 "" H 9000 1800 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L USB_OTG J5
+L kedtracker-rescue:USB_OTG J5
 U 1 1 59FFA20C
 P 8850 3100
 F 0 "J5" H 8650 3550 50  0000 L CNN
@@ -254,7 +221,7 @@ F 3 "" H 9000 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Crystal Y1
+L kedtracker-rescue:Crystal Y1
 U 1 1 59FFA406
 P 8000 1900
 F 0 "Y1" H 8000 2050 50  0000 C CNN
@@ -273,7 +240,7 @@ CON_RX
 Text Label 10250 1550 0    40   ~ 0
 CON_TX
 $Comp
-L D_Small D8
+L kedtracker-rescue:D_Small D8
 U 1 1 59FFDDAC
 P 10050 1350
 F 0 "D8" H 10000 1430 50  0000 L CNN
@@ -284,7 +251,7 @@ F 3 "" V 10050 1350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R_Small R16
+L kedtracker-rescue:R_Small R16
 U 1 1 59FFE1F4
 P 10050 1150
 F 0 "R16" V 9950 1100 50  0000 L CNN
@@ -295,7 +262,7 @@ F 3 "" H 10050 1150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C_Small C26
+L kedtracker-rescue:C_Small C26
 U 1 1 59FFEA83
 P 7550 2050
 F 0 "C26" H 7560 2120 50  0000 L CNN
@@ -306,7 +273,7 @@ F 3 "" H 7550 2050 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C_Small C25
+L kedtracker-rescue:C_Small C25
 U 1 1 59FFEAE2
 P 7550 1750
 F 0 "C25" H 7560 1820 50  0000 L CNN
@@ -317,7 +284,7 @@ F 3 "" H 7550 1750 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Earth #PWR037
+L kedtracker-rescue:Earth #PWR037
 U 1 1 59FFEECD
 P 7300 1950
 F 0 "#PWR037" H 7300 1700 50  0001 C CNN
@@ -328,7 +295,7 @@ F 3 "" H 7300 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Earth #PWR038
+L kedtracker-rescue:Earth #PWR038
 U 1 1 59FFF2A6
 P 8400 1650
 F 0 "#PWR038" H 8400 1400 50  0001 C CNN
@@ -343,7 +310,7 @@ Text GLabel 8300 1250 1    60   Input ~ 0
 Text GLabel 9450 2900 2    40   Input ~ 0
 5V
 $Comp
-L Earth #PWR039
+L kedtracker-rescue:Earth #PWR039
 U 1 1 59FFFCBC
 P 8850 3600
 F 0 "#PWR039" H 8850 3350 50  0001 C CNN
@@ -528,7 +495,7 @@ Wire Wire Line
 Wire Wire Line
 	8000 3950 8000 2250
 $Comp
-L C_Small C27
+L kedtracker-rescue:C_Small C27
 U 1 1 5A0644CA
 P 8050 1350
 F 0 "C27" H 8060 1420 50  0000 L CNN
@@ -539,7 +506,7 @@ F 3 "" H 8050 1350 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Earth #PWR040
+L kedtracker-rescue:Earth #PWR040
 U 1 1 5A06460D
 P 7900 1400
 F 0 "#PWR040" H 7900 1150 50  0001 C CNN
@@ -576,7 +543,7 @@ Wire Wire Line
 Wire Wire Line
 	9200 3300 9200 3550
 $Comp
-L CONN_01X04 J7
+L kedtracker-rescue:CONN_01X04 J7
 U 1 1 5A2F37E8
 P 9600 4950
 F 0 "J7" H 9600 5200 50  0000 C CNN
@@ -587,7 +554,7 @@ F 3 "" H 9600 4950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Earth #PWR041
+L kedtracker-rescue:Earth #PWR041
 U 1 1 5A2F3AFB
 P 9300 5200
 F 0 "#PWR041" H 9300 4950 50  0001 C CNN
@@ -616,7 +583,7 @@ CON_RX
 Text Label 9050 4900 0    40   ~ 0
 CON_TX
 $Comp
-L HC-05 RF2
+L kedtracker-rescue:HC-05 RF2
 U 1 1 5A2F470E
 P 4350 6250
 F 0 "RF2" H 3750 7100 60  0000 L CNN
@@ -627,7 +594,7 @@ F 3 "" H 3450 7100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Earth #PWR042
+L kedtracker-rescue:Earth #PWR042
 U 1 1 5A2F528C
 P 3350 7200
 F 0 "#PWR042" H 3350 6950 50  0001 C CNN
@@ -638,7 +605,7 @@ F 3 "" H 3350 7200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Earth #PWR043
+L kedtracker-rescue:Earth #PWR043
 U 1 1 5A2F52EE
 P 4700 7450
 F 0 "#PWR043" H 4700 7200 50  0001 C CNN
@@ -649,7 +616,7 @@ F 3 "" H 4700 7450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Earth #PWR044
+L kedtracker-rescue:Earth #PWR044
 U 1 1 5A2F5336
 P 5350 6950
 F 0 "#PWR044" H 5350 6700 50  0001 C CNN
@@ -672,7 +639,7 @@ Wire Wire Line
 Wire Wire Line
 	3100 5650 3450 5650
 $Comp
-L D_Small D7
+L kedtracker-rescue:D_Small D7
 U 1 1 5A2F5939
 P 3000 5650
 F 0 "D7" H 2950 5730 50  0000 L CNN
@@ -683,7 +650,7 @@ F 3 "" V 3000 5650 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L R_Small R15
+L kedtracker-rescue:R_Small R15
 U 1 1 5A2F593F
 P 3000 5400
 F 0 "R15" V 2900 5350 50  0000 L CNN
@@ -716,7 +683,7 @@ Wire Wire Line
 Text Label 2300 5850 0    40   ~ 0
 CON_TX
 $Comp
-L C_Small C12
+L kedtracker-rescue:C_Small C12
 U 1 1 5A2F679C
 P 3150 6950
 F 0 "C12" H 3160 7020 50  0000 L CNN
@@ -741,7 +708,7 @@ Text GLabel 3050 6750 0    40   Input ~ 0
 Wire Wire Line
 	5500 5650 5250 5650
 $Comp
-L CONN_01X02 J6
+L kedtracker-rescue:CONN_01X02 J6
 U 1 1 5A2F782C
 P 5300 5200
 F 0 "J6" H 5300 5350 50  0000 C CNN
@@ -754,7 +721,7 @@ $EndComp
 Wire Wire Line
 	5500 5250 5500 5650
 $Comp
-L R_Small R17
+L kedtracker-rescue:R_Small R17
 U 1 1 5A2F7D4B
 P 5650 5400
 F 0 "R17" V 5550 5350 50  0000 L CNN
@@ -768,7 +735,7 @@ Wire Wire Line
 	5550 5400 5500 5400
 Connection ~ 5500 5400
 $Comp
-L Earth #PWR045
+L kedtracker-rescue:Earth #PWR045
 U 1 1 5A2F7F1D
 P 5850 5500
 F 0 "#PWR045" H 5850 5250 50  0001 C CNN
@@ -789,7 +756,7 @@ Text GLabel 5700 5150 2    40   Input ~ 0
 Text Label 5250 5650 0    40   ~ 0
 BT_KEY
 $Comp
-L LED_Small LED4
+L kedtracker-rescue:LED_Small LED4
 U 1 1 5A2F840B
 P 6150 6250
 F 0 "LED4" H 6100 6375 50  0000 L CNN
@@ -800,7 +767,7 @@ F 3 "" V 6150 6250 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L R_Small R18
+L kedtracker-rescue:R_Small R18
 U 1 1 5A2F84BF
 P 5850 6250
 F 0 "R18" V 5750 6200 50  0000 L CNN
@@ -831,7 +798,7 @@ Wire Wire Line
 Wire Wire Line
 	9150 3100 9400 3100
 $Comp
-L Earth #PWR046
+L kedtracker-rescue:Earth #PWR046
 U 1 1 5A7708E8
 P 6350 6350
 F 0 "#PWR046" H 6350 6100 50  0001 C CNN

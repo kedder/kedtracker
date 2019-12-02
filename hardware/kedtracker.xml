@@ -1,0 +1,1673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/andrey/projects/kedtracker/hardware/kedtracker.sch</source>
+    <date>Mon 14 Oct 2019 04:35:41 PM EEST</date>
+    <tool>Eeschema 5.0.2+dfsg1-1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Ked Tracker</title>
+        <company/>
+        <rev>0.7</rev>
+        <date>2018-02-24</date>
+        <source>kedtracker.sch</source>
+        <comment number="1" value="Open Glider Network Tracker"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/Console/" tstamps="/59FF7E7B/">
+      <title_block>
+        <title>Console Input/Output and External Connectivity</title>
+        <company/>
+        <rev>0.7</rev>
+        <date>2018-02-24</date>
+        <source>console.sch</source>
+        <comment number="1" value="Open Glider Network Tracker"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="RF1">
+      <value>RFM69HW</value>
+      <footprint>Ked Tracker:RFM69HW</footprint>
+      <libsource lib="kedtracker-rescue" part="RFM69HW" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>598223BD</tstamp>
+    </comp>
+    <comp ref="J8">
+      <value>VK2828U7G5LF</value>
+      <footprint>Ked Tracker:Molex_PicoBlade_53047-0610_06x1.25mm_Straight</footprint>
+      <libsource lib="kedtracker-rescue" part="VK2828U7G5LF" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59822930</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>100nF</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>598375E1</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>100nF</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59837A47</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>ANT</value>
+      <footprint>Ked Tracker:SMA_CONN</footprint>
+      <libsource lib="kedtracker-rescue" part="CONN_COAXIAL" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59837E55</tstamp>
+    </comp>
+    <comp ref="B2">
+      <value>BMP280</value>
+      <footprint>Ked Tracker:BMP280</footprint>
+      <libsource lib="kedtracker-rescue" part="BMP280" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59B17E39</tstamp>
+    </comp>
+    <comp ref="C16">
+      <value>100nF</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59B18536</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59B19B1A</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59B19BB5</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>SS14</value>
+      <footprint>Diodes_SMD:D_SMA_Standard</footprint>
+      <libsource lib="kedtracker-rescue" part="D" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59B1C17B</tstamp>
+    </comp>
+    <comp ref="L1">
+      <value>1uH</value>
+      <footprint>Inductors:INDUCTOR_V</footprint>
+      <libsource lib="kedtracker-rescue" part="Ferrite_Bead" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59B1D266</tstamp>
+    </comp>
+    <comp ref="B1">
+      <value>BUCK_CVTR</value>
+      <footprint>Ked Tracker:Buck_Converter_Sm</footprint>
+      <libsource lib="kedtracker-rescue" part="BUCK_CVTR" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59B305A7</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>1uF</value>
+      <footprint>Capacitors_SMD:C_1206</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59B6DBF2</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>330uF</value>
+      <footprint>Capacitors_ThroughHole:CP_Radial_D6.3mm_P2.50mm</footprint>
+      <libsource lib="kedtracker-rescue" part="CP1" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59B6EA7A</tstamp>
+    </comp>
+    <comp ref="J9">
+      <value>SDCARD_READER</value>
+      <footprint>Ked Tracker:SDCARD_BOMB</footprint>
+      <libsource lib="kedtracker-rescue" part="Micro_SD_Card_Det1" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A00BEEF</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>100nF</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A00D363</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="R_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A00D98C</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="R_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A00D9E3</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="R_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A00DF44</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>820</value>
+      <footprint>Resistors_SMD:R_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="R_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A01235A</tstamp>
+    </comp>
+    <comp ref="LED3">
+      <value>BLUE</value>
+      <footprint>LEDs:LED_D5.0mm_Horizontal_O3.81mm_Z3.0mm</footprint>
+      <libsource lib="kedtracker-rescue" part="LED" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A0123E3</tstamp>
+    </comp>
+    <comp ref="LS1">
+      <value>BUZZER</value>
+      <footprint>Buzzers_Beepers:Buzzer_12x9.5RM7.6</footprint>
+      <libsource lib="kedtracker-rescue" part="Speaker" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A013A83</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>47uF</value>
+      <footprint>Capacitors_SMD:C_1210</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A02380C</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>1uF</value>
+      <footprint>Capacitors_SMD:C_1206</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A024206</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>LM3940</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-223-3Lead_TabPin2</footprint>
+      <libsource lib="kedtracker-rescue" part="LM2936-3.3" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A02514F</tstamp>
+    </comp>
+    <comp ref="F1">
+      <value>0.2A</value>
+      <footprint>Fuse_Holders_and_Fuses:Fuse_SMD1206_Reflow</footprint>
+      <libsource lib="kedtracker-rescue" part="Polyfuse_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A148D8E</tstamp>
+    </comp>
+    <comp ref="F2">
+      <value>0.5A</value>
+      <footprint>Fuse_Holders_and_Fuses:Fuse_SMD1206_Reflow</footprint>
+      <libsource lib="kedtracker-rescue" part="Polyfuse_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A1493BC</tstamp>
+    </comp>
+    <comp ref="MCU1">
+      <value>STM32F103</value>
+      <footprint>Housings_QFP:LQFP-48_7x7mm_Pitch0.5mm</footprint>
+      <libsource lib="kedtracker-rescue" part="STM32F103" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A19EA8C</tstamp>
+    </comp>
+    <comp ref="C8">
+      <value>100nF</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A19F5C9</tstamp>
+    </comp>
+    <comp ref="C9">
+      <value>100nF</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A19F728</tstamp>
+    </comp>
+    <comp ref="C10">
+      <value>100nF</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A19F793</tstamp>
+    </comp>
+    <comp ref="C11">
+      <value>100nF</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A19F806</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>SWD</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm</footprint>
+      <libsource lib="kedtracker-rescue" part="CONN_01X04" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A1A3ABC</tstamp>
+    </comp>
+    <comp ref="C18">
+      <value>100nF</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A1A3FEA</tstamp>
+    </comp>
+    <comp ref="SW1">
+      <value>RESET</value>
+      <footprint>Buttons_Switches_SMD:SW_SPST_SKQG</footprint>
+      <libsource lib="kedtracker-rescue" part="SW_Push" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A1A719B</tstamp>
+    </comp>
+    <comp ref="C17">
+      <value>1uF</value>
+      <footprint>Capacitors_SMD:C_1206</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A1A751B</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="R_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A1A7841</tstamp>
+    </comp>
+    <comp ref="Y2">
+      <value>8M</value>
+      <footprint>Crystals:Crystal_SMD_HC49-SD</footprint>
+      <libsource lib="kedtracker-rescue" part="Crystal_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A1A98FB</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>1M</value>
+      <footprint>Resistors_SMD:R_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="R_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A1A9CF5</tstamp>
+    </comp>
+    <comp ref="C14">
+      <value>22pF</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A1AA183</tstamp>
+    </comp>
+    <comp ref="C15">
+      <value>22pF</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A1AA224</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>520</value>
+      <footprint>Resistors_SMD:R_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="R_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A1AE2A3</tstamp>
+    </comp>
+    <comp ref="LED2">
+      <value>YELLOW</value>
+      <footprint>LEDs:LED_0603</footprint>
+      <libsource lib="kedtracker-rescue" part="LED_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A1AE342</tstamp>
+    </comp>
+    <comp ref="LED1">
+      <value>GREEN</value>
+      <footprint>LEDs:LED_D5.0mm_Horizontal_O3.81mm_Z3.0mm</footprint>
+      <libsource lib="kedtracker-rescue" part="LED_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A1AE523</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>100</value>
+      <footprint>Resistors_SMD:R_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="R_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A1AEAEE</tstamp>
+    </comp>
+    <comp ref="LED5">
+      <value>RED</value>
+      <footprint>LEDs:LED_0603</footprint>
+      <libsource lib="kedtracker-rescue" part="LED_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A1AF5A5</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>520</value>
+      <footprint>Resistors_SMD:R_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="R_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A1AF662</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>BOOT</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_2x01_Pitch2.54mm</footprint>
+      <libsource lib="kedtracker-rescue" part="CONN_01X02" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A2F0786</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="R_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A2F0AA3</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="R_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A2F121B</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>SS14</value>
+      <footprint>Diodes_SMD:D_SMA_Standard</footprint>
+      <libsource lib="kedtracker-rescue" part="D_Schottky" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A8351B0</tstamp>
+    </comp>
+    <comp ref="R19">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="R_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A84820F</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>MAX3232</value>
+      <footprint>Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm</footprint>
+      <libsource lib="kedtracker-rescue" part="MAX232" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>59FF8DDB</tstamp>
+    </comp>
+    <comp ref="C21">
+      <value>100nF</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>59FF8DE9</tstamp>
+    </comp>
+    <comp ref="C19">
+      <value>100nF</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>59FF8DF4</tstamp>
+    </comp>
+    <comp ref="C22">
+      <value>100nF</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>59FF8DFF</tstamp>
+    </comp>
+    <comp ref="C23">
+      <value>100nF</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>59FF8E06</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>IGC</value>
+      <footprint>Ked Tracker:RJ45_SOCKET_SHLD</footprint>
+      <libsource lib="kedtracker-rescue" part="RJ45" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>59FF8E19</tstamp>
+    </comp>
+    <comp ref="C20">
+      <value>100nF</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>59FF8E6F</tstamp>
+    </comp>
+    <comp ref="D6">
+      <value>1N4148</value>
+      <footprint>Diodes_SMD:D_1206</footprint>
+      <libsource lib="kedtracker-rescue" part="D_Small" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>59FF8EA1</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="R_Small" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>59FF8EA9</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>CH340G</value>
+      <footprint>Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm</footprint>
+      <libsource lib="kedtracker-rescue" part="CH340G" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>59FFA19D</tstamp>
+    </comp>
+    <comp ref="J5">
+      <value>Micro USB</value>
+      <footprint>Ked Tracker:USB_Micro</footprint>
+      <libsource lib="kedtracker-rescue" part="USB_OTG" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>59FFA20C</tstamp>
+    </comp>
+    <comp ref="Y1">
+      <value>12M</value>
+      <footprint>Crystals:Crystal_HC49-4H_Vertical</footprint>
+      <libsource lib="kedtracker-rescue" part="Crystal" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>59FFA406</tstamp>
+    </comp>
+    <comp ref="D8">
+      <value>1N4148</value>
+      <footprint>Diodes_SMD:D_1206</footprint>
+      <libsource lib="kedtracker-rescue" part="D_Small" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>59FFDDAC</tstamp>
+    </comp>
+    <comp ref="R16">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="R_Small" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>59FFE1F4</tstamp>
+    </comp>
+    <comp ref="C26">
+      <value>22pF</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>59FFEA83</tstamp>
+    </comp>
+    <comp ref="C25">
+      <value>22pF</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>59FFEAE2</tstamp>
+    </comp>
+    <comp ref="C27">
+      <value>100nF</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>5A0644CA</tstamp>
+    </comp>
+    <comp ref="J7">
+      <value>UART</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm</footprint>
+      <libsource lib="kedtracker-rescue" part="CONN_01X04" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>5A2F37E8</tstamp>
+    </comp>
+    <comp ref="RF2">
+      <value>HC-05</value>
+      <footprint>Ked Tracker:HC-05</footprint>
+      <libsource lib="kedtracker-rescue" part="HC-05" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>5A2F470E</tstamp>
+    </comp>
+    <comp ref="D7">
+      <value>1N4148</value>
+      <footprint>Diodes_SMD:D_1206</footprint>
+      <libsource lib="kedtracker-rescue" part="D_Small" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>5A2F5939</tstamp>
+    </comp>
+    <comp ref="R15">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="R_Small" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>5A2F593F</tstamp>
+    </comp>
+    <comp ref="C12">
+      <value>1uF</value>
+      <footprint>Capacitors_SMD:C_1206</footprint>
+      <libsource lib="kedtracker-rescue" part="C_Small" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>5A2F679C</tstamp>
+    </comp>
+    <comp ref="J6">
+      <value>BT_KEY</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_2x01_Pitch2.54mm</footprint>
+      <libsource lib="kedtracker-rescue" part="CONN_01X02" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>5A2F782C</tstamp>
+    </comp>
+    <comp ref="R17">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="R_Small" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>5A2F7D4B</tstamp>
+    </comp>
+    <comp ref="LED4">
+      <value>BLUE</value>
+      <footprint>LEDs:LED_0603</footprint>
+      <libsource lib="kedtracker-rescue" part="LED_Small" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>5A2F840B</tstamp>
+    </comp>
+    <comp ref="R18">
+      <value>520</value>
+      <footprint>Resistors_SMD:R_0805</footprint>
+      <libsource lib="kedtracker-rescue" part="R_Small" description=""/>
+      <sheetpath names="/Console/" tstamps="/59FF7E7B/"/>
+      <tstamp>5A2F84BF</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="kedtracker-rescue" part="BMP280">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">BMP280</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SDA" type="input"/>
+        <pin num="2" name="SCL" type="input"/>
+        <pin num="3" name="GND" type="input"/>
+        <pin num="4" name="VIN" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="BUCK_CVTR">
+      <fields>
+        <field name="Reference">PWR</field>
+        <field name="Value">BUCK_CVTR</field>
+      </fields>
+      <pins>
+        <pin num="1" name="EN" type="input"/>
+        <pin num="2" name="IN+" type="power_in"/>
+        <pin num="3" name="GND" type="input"/>
+        <pin num="4" name="VO+" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="CH340G">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">CH340G</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="input"/>
+        <pin num="2" name="TXD" type="input"/>
+        <pin num="3" name="RXD" type="input"/>
+        <pin num="4" name="V3" type="input"/>
+        <pin num="5" name="D+" type="input"/>
+        <pin num="6" name="D-" type="input"/>
+        <pin num="7" name="XI" type="input"/>
+        <pin num="8" name="XO" type="input"/>
+        <pin num="9" name="CTS#" type="input"/>
+        <pin num="10" name="DSR#" type="input"/>
+        <pin num="11" name="RI#" type="input"/>
+        <pin num="12" name="DCD#" type="input"/>
+        <pin num="13" name="DTR#" type="input"/>
+        <pin num="14" name="RTS#" type="input"/>
+        <pin num="15" name="R232" type="input"/>
+        <pin num="16" name="VCC" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="CONN_01X02">
+      <footprints>
+        <fp>Pin_Header_Straight_1X*</fp>
+        <fp>Pin_Header_Angled_1X*</fp>
+        <fp>Socket_Strip_Straight_1X*</fp>
+        <fp>Socket_Strip_Angled_1X*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN_01X02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="CONN_01X04">
+      <footprints>
+        <fp>Pin_Header_Straight_1X*</fp>
+        <fp>Pin_Header_Angled_1X*</fp>
+        <fp>Socket_Strip_Straight_1X*</fp>
+        <fp>Socket_Strip_Angled_1X*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN_01X04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="CONN_COAXIAL">
+      <footprints>
+        <fp>*BNC*</fp>
+        <fp>*SMA*</fp>
+        <fp>*SMB*</fp>
+        <fp>*SMC*</fp>
+        <fp>*Cinch*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN_COAXIAL</field>
+      </fields>
+      <pins>
+        <pin num="1" name="In" type="passive"/>
+        <pin num="2" name="Ext" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="CP1">
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="C_Small">
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="Crystal">
+      <footprints>
+        <fp>Crystal*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Y</field>
+        <field name="Value">Crystal</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="Crystal_Small">
+      <footprints>
+        <fp>Crystal*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Y</field>
+        <field name="Value">Crystal_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="D">
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*SingleDiode</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="D_Schottky">
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*SingleDiode</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Schottky</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="D_Small">
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*SingleDiode</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="Ferrite_Bead">
+      <footprints>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+        <fp>*Ferrite*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">Ferrite_Bead</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="HC-05">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">HC-05</field>
+      </fields>
+      <pins>
+        <pin num="1" name="UART_TXD" type="input"/>
+        <pin num="2" name="UART_RXD" type="input"/>
+        <pin num="3" name="CTS" type="input"/>
+        <pin num="4" name="RTS" type="input"/>
+        <pin num="5" name="PCM_CLK" type="input"/>
+        <pin num="6" name="PCM_OUT" type="input"/>
+        <pin num="7" name="PCM_IN" type="input"/>
+        <pin num="8" name="PCM_SYNC" type="input"/>
+        <pin num="9" name="AIO0" type="input"/>
+        <pin num="10" name="AIO1" type="input"/>
+        <pin num="11" name="RESET" type="input"/>
+        <pin num="12" name="3.3V" type="input"/>
+        <pin num="13" name="GND" type="input"/>
+        <pin num="14" name="NC" type="input"/>
+        <pin num="15" name="USB_D-" type="input"/>
+        <pin num="16" name="CSB" type="input"/>
+        <pin num="17" name="MOSI" type="input"/>
+        <pin num="18" name="MISO" type="input"/>
+        <pin num="19" name="CLK" type="input"/>
+        <pin num="20" name="USB_D+" type="input"/>
+        <pin num="21" name="GND" type="input"/>
+        <pin num="22" name="GND" type="input"/>
+        <pin num="23" name="PIO0" type="input"/>
+        <pin num="24" name="PIO1" type="input"/>
+        <pin num="25" name="PIO2" type="input"/>
+        <pin num="26" name="PIO3" type="input"/>
+        <pin num="27" name="PIO4" type="input"/>
+        <pin num="28" name="PIO5" type="input"/>
+        <pin num="29" name="PIO6" type="input"/>
+        <pin num="30" name="PIO7" type="input"/>
+        <pin num="31" name="PIO8" type="input"/>
+        <pin num="32" name="PIO9" type="input"/>
+        <pin num="33" name="PIO10" type="input"/>
+        <pin num="34" name="PIO11" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="LED">
+      <footprints>
+        <fp>LED*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="LED_Small">
+      <footprints>
+        <fp>LED-*</fp>
+        <fp>LED_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="LM2936-3.3">
+      <footprints>
+        <fp>TO?252*</fp>
+        <fp>SOT?223*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM2936-3.3</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VI" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="VO" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="MAX232">
+      <footprints>
+        <fp>SOIC*Pitch1.27mm*</fp>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>TSSOP*4.4x5mm*Pitch0.65mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MAX232</field>
+      </fields>
+      <pins>
+        <pin num="1" name="C1+" type="passive"/>
+        <pin num="2" name="VS+" type="power_out"/>
+        <pin num="3" name="C1-" type="passive"/>
+        <pin num="4" name="C2+" type="passive"/>
+        <pin num="5" name="C2-" type="passive"/>
+        <pin num="6" name="VS-" type="power_out"/>
+        <pin num="7" name="T2OUT" type="output"/>
+        <pin num="8" name="R2IN" type="input"/>
+        <pin num="9" name="R2OUT" type="output"/>
+        <pin num="10" name="T2IN" type="input"/>
+        <pin num="11" name="T1IN" type="input"/>
+        <pin num="12" name="R1OUT" type="output"/>
+        <pin num="13" name="R1IN" type="input"/>
+        <pin num="14" name="T1OUT" type="output"/>
+        <pin num="15" name="GND" type="power_in"/>
+        <pin num="16" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="Micro_SD_Card_Det1">
+      <footprints>
+        <fp>microSD*Card*Receptable*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Micro_SD_Card_Det1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="DAT2" type="BiDi"/>
+        <pin num="2" name="DAT3/CD" type="BiDi"/>
+        <pin num="3" name="CMD" type="input"/>
+        <pin num="4" name="VDD" type="power_in"/>
+        <pin num="5" name="CLK" type="input"/>
+        <pin num="6" name="VSS" type="power_in"/>
+        <pin num="7" name="DAT0" type="input"/>
+        <pin num="8" name="DAT1" type="input"/>
+        <pin num="9" name="DET_A" type="passive"/>
+        <pin num="10" name="SHIELD" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="Polyfuse_Small">
+      <footprints>
+        <fp>*polyfuse*</fp>
+        <fp>*PTC*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">Polyfuse_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="R">
+      <footprints>
+        <fp>R_*</fp>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="RFM69HW">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">RFM69HW</field>
+      </fields>
+      <pins>
+        <pin num="1" name="3.3V" type="input"/>
+        <pin num="2" name="DIO5" type="input"/>
+        <pin num="3" name="DIO4" type="input"/>
+        <pin num="4" name="DIO3" type="input"/>
+        <pin num="5" name="DIO2" type="input"/>
+        <pin num="6" name="DIO1" type="input"/>
+        <pin num="7" name="DIO0" type="input"/>
+        <pin num="8" name="RESET" type="input"/>
+        <pin num="9" name="GND" type="input"/>
+        <pin num="10" name="ANA" type="input"/>
+        <pin num="11" name="GND" type="input"/>
+        <pin num="12" name="SCK" type="input"/>
+        <pin num="13" name="MISO" type="input"/>
+        <pin num="14" name="MOSI" type="input"/>
+        <pin num="15" name="NSS" type="input"/>
+        <pin num="16" name="NC" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="RJ45">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">RJ45</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
+        <pin num="7" name="~" type="passive"/>
+        <pin num="8" name="~" type="passive"/>
+        <pin num="9" name="SHIELD" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="R_Small">
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="STM32F103">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">STM32F103</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VBAT" type="input"/>
+        <pin num="2" name="PC13" type="input"/>
+        <pin num="3" name="PC14" type="input"/>
+        <pin num="4" name="PC15" type="input"/>
+        <pin num="5" name="OSCIN" type="input"/>
+        <pin num="6" name="OSCOUT" type="input"/>
+        <pin num="7" name="NRST" type="input"/>
+        <pin num="8" name="VSSA" type="input"/>
+        <pin num="9" name="VDDA" type="input"/>
+        <pin num="10" name="PA0" type="input"/>
+        <pin num="11" name="PA1" type="input"/>
+        <pin num="12" name="PA2" type="input"/>
+        <pin num="13" name="PA3" type="input"/>
+        <pin num="14" name="PA4" type="input"/>
+        <pin num="15" name="PA5" type="input"/>
+        <pin num="16" name="PA6" type="input"/>
+        <pin num="17" name="PA7" type="input"/>
+        <pin num="18" name="PB0" type="input"/>
+        <pin num="19" name="PB1" type="input"/>
+        <pin num="20" name="PB2/BOOT1" type="input"/>
+        <pin num="21" name="PB10" type="input"/>
+        <pin num="22" name="PB11" type="input"/>
+        <pin num="23" name="VSS_1" type="input"/>
+        <pin num="24" name="VDD_1" type="input"/>
+        <pin num="25" name="PB12" type="input"/>
+        <pin num="26" name="PB13" type="input"/>
+        <pin num="27" name="PB14" type="input"/>
+        <pin num="28" name="PB15" type="input"/>
+        <pin num="29" name="PA8" type="input"/>
+        <pin num="30" name="PA9" type="input"/>
+        <pin num="31" name="PA10" type="input"/>
+        <pin num="32" name="PA11" type="input"/>
+        <pin num="33" name="PA12" type="input"/>
+        <pin num="34" name="SWIO" type="input"/>
+        <pin num="35" name="VSS_2" type="input"/>
+        <pin num="36" name="VDD_2" type="input"/>
+        <pin num="37" name="SWCLK" type="input"/>
+        <pin num="38" name="PA15" type="input"/>
+        <pin num="39" name="PB3" type="input"/>
+        <pin num="40" name="PB4" type="input"/>
+        <pin num="41" name="PB5" type="input"/>
+        <pin num="42" name="PB6" type="input"/>
+        <pin num="43" name="PB7" type="input"/>
+        <pin num="44" name="BOOT0" type="input"/>
+        <pin num="45" name="PB8" type="input"/>
+        <pin num="46" name="PB9" type="input"/>
+        <pin num="47" name="VSS_3" type="input"/>
+        <pin num="48" name="VDD_3" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="SW_Push">
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="Speaker">
+      <fields>
+        <field name="Reference">LS</field>
+        <field name="Value">Speaker</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+        <pin num="2" name="2" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="USB_OTG">
+      <footprints>
+        <fp>USB*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">USB_OTG</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VBUS" type="power_in"/>
+        <pin num="2" name="D-" type="passive"/>
+        <pin num="3" name="D+" type="passive"/>
+        <pin num="4" name="ID" type="passive"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="Shield" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="kedtracker-rescue" part="VK2828U7G5LF">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">VK2828U7G5LF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="PPS" type="input"/>
+        <pin num="2" name="VCC" type="input"/>
+        <pin num="3" name="TX" type="input"/>
+        <pin num="4" name="RX" type="input"/>
+        <pin num="5" name="GND" type="input"/>
+        <pin num="6" name="EN" type="input"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="kedtracker-rescue">
+      <uri>/home/andrey/projects/kedtracker/hardware/kedtracker-rescue.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/5V_PROT">
+      <node ref="C2" pin="1"/>
+      <node ref="F2" pin="2"/>
+      <node ref="J8" pin="2"/>
+      <node ref="U1" pin="1"/>
+      <node ref="C3" pin="1"/>
+    </net>
+    <net code="2" name="/SWDIO">
+      <node ref="J2" pin="2"/>
+      <node ref="MCU1" pin="34"/>
+    </net>
+    <net code="3" name="/SWDCLK">
+      <node ref="MCU1" pin="37"/>
+      <node ref="J2" pin="3"/>
+    </net>
+    <net code="4" name="/5V_OUT">
+      <node ref="B1" pin="4"/>
+      <node ref="D2" pin="2"/>
+    </net>
+    <net code="5" name="/Console/BT_PAIRED">
+      <node ref="RF2" pin="32"/>
+      <node ref="R7" pin="1"/>
+    </net>
+    <net code="6" name="Net-(LED3-Pad2)">
+      <node ref="R7" pin="2"/>
+      <node ref="LED3" pin="2"/>
+    </net>
+    <net code="7" name="+12V">
+      <node ref="F1" pin="1"/>
+      <node ref="J4" pin="8"/>
+      <node ref="J4" pin="7"/>
+    </net>
+    <net code="8" name="Net-(LED1-Pad1)">
+      <node ref="R1" pin="2"/>
+      <node ref="LED1" pin="1"/>
+    </net>
+    <net code="9" name="/BARO_SCL">
+      <node ref="MCU1" pin="42"/>
+      <node ref="B2" pin="2"/>
+      <node ref="R10" pin="1"/>
+    </net>
+    <net code="10" name="/BARO_SDA">
+      <node ref="B2" pin="1"/>
+      <node ref="R9" pin="1"/>
+      <node ref="MCU1" pin="43"/>
+    </net>
+    <net code="11" name="Net-(J9-Pad9)">
+      <node ref="J9" pin="9"/>
+    </net>
+    <net code="12" name="Net-(J9-Pad8)">
+      <node ref="J9" pin="8"/>
+    </net>
+    <net code="13" name="Net-(J9-Pad1)">
+      <node ref="J9" pin="1"/>
+    </net>
+    <net code="14" name="Earth">
+      <node ref="C18" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="C20" pin="1"/>
+      <node ref="C5" pin="2"/>
+      <node ref="SW1" pin="1"/>
+      <node ref="C6" pin="2"/>
+      <node ref="LED3" pin="1"/>
+      <node ref="MCU1" pin="23"/>
+      <node ref="U1" pin="2"/>
+      <node ref="C11" pin="1"/>
+      <node ref="MCU1" pin="35"/>
+      <node ref="U3" pin="1"/>
+      <node ref="J9" pin="10"/>
+      <node ref="J5" pin="6"/>
+      <node ref="J5" pin="5"/>
+      <node ref="J5" pin="4"/>
+      <node ref="C9" pin="1"/>
+      <node ref="C8" pin="2"/>
+      <node ref="U2" pin="15"/>
+      <node ref="J4" pin="2"/>
+      <node ref="J4" pin="9"/>
+      <node ref="C10" pin="1"/>
+      <node ref="J9" pin="6"/>
+      <node ref="C7" pin="2"/>
+      <node ref="C17" pin="2"/>
+      <node ref="J2" pin="4"/>
+      <node ref="LED5" pin="1"/>
+      <node ref="RF2" pin="13"/>
+      <node ref="J1" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="RF2" pin="21"/>
+      <node ref="C27" pin="1"/>
+      <node ref="B1" pin="3"/>
+      <node ref="R17" pin="1"/>
+      <node ref="J7" pin="4"/>
+      <node ref="C2" pin="2"/>
+      <node ref="J8" pin="5"/>
+      <node ref="MCU1" pin="47"/>
+      <node ref="C3" pin="2"/>
+      <node ref="D1" pin="2"/>
+      <node ref="B2" pin="3"/>
+      <node ref="C16" pin="2"/>
+      <node ref="RF2" pin="22"/>
+      <node ref="RF1" pin="9"/>
+      <node ref="C12" pin="2"/>
+      <node ref="LED4" pin="1"/>
+      <node ref="RF1" pin="11"/>
+      <node ref="C25" pin="1"/>
+      <node ref="C26" pin="1"/>
+      <node ref="C23" pin="1"/>
+      <node ref="R19" pin="1"/>
+      <node ref="J4" pin="1"/>
+      <node ref="J4" pin="5"/>
+      <node ref="R13" pin="2"/>
+    </net>
+    <net code="15" name="Net-(LED2-Pad1)">
+      <node ref="LED2" pin="1"/>
+      <node ref="R2" pin="2"/>
+    </net>
+    <net code="16" name="5V">
+      <node ref="F2" pin="1"/>
+      <node ref="J5" pin="1"/>
+      <node ref="D2" pin="1"/>
+    </net>
+    <net code="17" name="/BOOT1">
+      <node ref="R19" pin="2"/>
+      <node ref="MCU1" pin="20"/>
+    </net>
+    <net code="18" name="/RESET">
+      <node ref="MCU1" pin="7"/>
+      <node ref="SW1" pin="2"/>
+      <node ref="R11" pin="2"/>
+      <node ref="RF2" pin="11"/>
+      <node ref="C17" pin="1"/>
+    </net>
+    <net code="19" name="Earth_Protective">
+      <node ref="C14" pin="2"/>
+      <node ref="C15" pin="2"/>
+      <node ref="MCU1" pin="8"/>
+      <node ref="MCU1" pin="4"/>
+    </net>
+    <net code="20" name="3.3V">
+      <node ref="LED1" pin="2"/>
+      <node ref="MCU1" pin="24"/>
+      <node ref="R3" pin="1"/>
+      <node ref="J2" pin="1"/>
+      <node ref="LED2" pin="2"/>
+      <node ref="C10" pin="2"/>
+      <node ref="C27" pin="2"/>
+      <node ref="C9" pin="2"/>
+      <node ref="C8" pin="1"/>
+      <node ref="J3" pin="1"/>
+      <node ref="C18" pin="1"/>
+      <node ref="R11" pin="1"/>
+      <node ref="MCU1" pin="36"/>
+      <node ref="J6" pin="2"/>
+      <node ref="C11" pin="2"/>
+      <node ref="RF2" pin="12"/>
+      <node ref="J7" pin="1"/>
+      <node ref="MCU1" pin="48"/>
+      <node ref="MCU1" pin="9"/>
+      <node ref="U1" pin="3"/>
+      <node ref="C12" pin="1"/>
+      <node ref="C6" pin="1"/>
+      <node ref="J9" pin="4"/>
+      <node ref="U3" pin="4"/>
+      <node ref="U3" pin="16"/>
+      <node ref="R4" pin="1"/>
+      <node ref="C22" pin="1"/>
+      <node ref="C7" pin="1"/>
+      <node ref="R6" pin="1"/>
+      <node ref="R5" pin="1"/>
+      <node ref="C20" pin="2"/>
+      <node ref="C5" pin="1"/>
+      <node ref="U2" pin="16"/>
+      <node ref="C4" pin="1"/>
+      <node ref="R9" pin="2"/>
+      <node ref="B2" pin="4"/>
+      <node ref="C16" pin="1"/>
+      <node ref="R10" pin="2"/>
+      <node ref="J4" pin="6"/>
+      <node ref="RF1" pin="1"/>
+    </net>
+    <net code="21" name="/STAT_LED">
+      <node ref="MCU1" pin="2"/>
+      <node ref="R2" pin="1"/>
+      <node ref="R1" pin="1"/>
+    </net>
+    <net code="22" name="Net-(LED5-Pad2)">
+      <node ref="R3" pin="2"/>
+      <node ref="LED5" pin="2"/>
+    </net>
+    <net code="23" name="Net-(MCU1-Pad32)">
+      <node ref="MCU1" pin="32"/>
+    </net>
+    <net code="24" name="Net-(J3-Pad2)">
+      <node ref="R12" pin="1"/>
+      <node ref="R13" pin="1"/>
+      <node ref="J3" pin="2"/>
+    </net>
+    <net code="25" name="/BOOT0">
+      <node ref="R12" pin="2"/>
+      <node ref="MCU1" pin="44"/>
+    </net>
+    <net code="26" name="Net-(MCU1-Pad33)">
+      <node ref="MCU1" pin="33"/>
+    </net>
+    <net code="27" name="Net-(B1-Pad1)">
+      <node ref="B1" pin="1"/>
+    </net>
+    <net code="28" name="/SUP_CLEAN">
+      <node ref="C1" pin="1"/>
+      <node ref="B1" pin="2"/>
+      <node ref="L1" pin="1"/>
+    </net>
+    <net code="29" name="/SUP_PROT">
+      <node ref="F1" pin="2"/>
+      <node ref="L1" pin="2"/>
+      <node ref="D1" pin="1"/>
+    </net>
+    <net code="30" name="Net-(MCU1-Pad1)">
+      <node ref="MCU1" pin="1"/>
+    </net>
+    <net code="31" name="Net-(MCU1-Pad18)">
+      <node ref="MCU1" pin="18"/>
+    </net>
+    <net code="32" name="/BUZ_OUT">
+      <node ref="MCU1" pin="45"/>
+      <node ref="LS1" pin="2"/>
+    </net>
+    <net code="33" name="/BUZ_IN">
+      <node ref="MCU1" pin="46"/>
+      <node ref="LS1" pin="1"/>
+    </net>
+    <net code="34" name="/GPS_TXD">
+      <node ref="J8" pin="4"/>
+      <node ref="MCU1" pin="12"/>
+    </net>
+    <net code="35" name="/SPI_CLOCK">
+      <node ref="MCU1" pin="15"/>
+      <node ref="RF1" pin="12"/>
+    </net>
+    <net code="36" name="/SPI_SELECT">
+      <node ref="RF1" pin="15"/>
+      <node ref="MCU1" pin="14"/>
+    </net>
+    <net code="37" name="/GPS_RXD">
+      <node ref="J8" pin="3"/>
+      <node ref="MCU1" pin="13"/>
+    </net>
+    <net code="38" name="/SPI_MISO">
+      <node ref="RF1" pin="13"/>
+      <node ref="MCU1" pin="16"/>
+    </net>
+    <net code="39" name="/GPS_PPS">
+      <node ref="MCU1" pin="11"/>
+      <node ref="J8" pin="1"/>
+    </net>
+    <net code="40" name="/GPS_ENABLE">
+      <node ref="J8" pin="6"/>
+      <node ref="MCU1" pin="10"/>
+    </net>
+    <net code="41" name="Net-(RF1-Pad3)">
+      <node ref="RF1" pin="3"/>
+    </net>
+    <net code="42" name="Net-(RF1-Pad16)">
+      <node ref="RF1" pin="16"/>
+    </net>
+    <net code="43" name="Net-(RF1-Pad4)">
+      <node ref="RF1" pin="4"/>
+    </net>
+    <net code="44" name="Net-(RF1-Pad5)">
+      <node ref="RF1" pin="5"/>
+    </net>
+    <net code="45" name="Net-(RF1-Pad6)">
+      <node ref="RF1" pin="6"/>
+    </net>
+    <net code="46" name="/SPI_MOSI">
+      <node ref="MCU1" pin="17"/>
+      <node ref="RF1" pin="14"/>
+    </net>
+    <net code="47" name="/ANT">
+      <node ref="RF1" pin="10"/>
+      <node ref="J1" pin="1"/>
+    </net>
+    <net code="48" name="/RF_RESET">
+      <node ref="RF1" pin="8"/>
+      <node ref="MCU1" pin="41"/>
+    </net>
+    <net code="49" name="/RTCIN">
+      <node ref="MCU1" pin="3"/>
+    </net>
+    <net code="50" name="/RF_IRQ">
+      <node ref="MCU1" pin="40"/>
+      <node ref="RF1" pin="7"/>
+    </net>
+    <net code="51" name="/OSCOUT">
+      <node ref="R8" pin="2"/>
+      <node ref="C15" pin="1"/>
+      <node ref="Y2" pin="2"/>
+      <node ref="MCU1" pin="6"/>
+    </net>
+    <net code="52" name="/OSCIN">
+      <node ref="C14" pin="1"/>
+      <node ref="R8" pin="1"/>
+      <node ref="MCU1" pin="5"/>
+      <node ref="Y2" pin="1"/>
+    </net>
+    <net code="53" name="/CON1_TXD">
+      <node ref="MCU1" pin="30"/>
+      <node ref="RF2" pin="2"/>
+      <node ref="U2" pin="11"/>
+      <node ref="J7" pin="2"/>
+      <node ref="U3" pin="3"/>
+    </net>
+    <net code="54" name="/CON1_RXD">
+      <node ref="MCU1" pin="31"/>
+      <node ref="D7" pin="2"/>
+      <node ref="D6" pin="2"/>
+      <node ref="R14" pin="2"/>
+      <node ref="R15" pin="2"/>
+      <node ref="J7" pin="3"/>
+      <node ref="R16" pin="1"/>
+      <node ref="D8" pin="2"/>
+    </net>
+    <net code="55" name="Net-(MCU1-Pad22)">
+      <node ref="MCU1" pin="22"/>
+    </net>
+    <net code="56" name="Net-(MCU1-Pad21)">
+      <node ref="MCU1" pin="21"/>
+    </net>
+    <net code="57" name="Net-(MCU1-Pad19)">
+      <node ref="MCU1" pin="19"/>
+    </net>
+    <net code="58" name="Net-(MCU1-Pad29)">
+      <node ref="MCU1" pin="29"/>
+    </net>
+    <net code="59" name="Net-(MCU1-Pad38)">
+      <node ref="MCU1" pin="38"/>
+    </net>
+    <net code="60" name="/RF_AUXSTAT">
+      <node ref="MCU1" pin="39"/>
+      <node ref="RF1" pin="2"/>
+    </net>
+    <net code="61" name="/SD_CS">
+      <node ref="MCU1" pin="25"/>
+      <node ref="J9" pin="2"/>
+      <node ref="R6" pin="2"/>
+    </net>
+    <net code="62" name="/SD_MOSI">
+      <node ref="J9" pin="3"/>
+      <node ref="R5" pin="2"/>
+      <node ref="MCU1" pin="28"/>
+    </net>
+    <net code="63" name="/SD_SCK">
+      <node ref="MCU1" pin="26"/>
+      <node ref="J9" pin="5"/>
+      <node ref="R4" pin="2"/>
+    </net>
+    <net code="64" name="/SD_MISO">
+      <node ref="MCU1" pin="27"/>
+      <node ref="J9" pin="7"/>
+    </net>
+    <net code="65" name="Net-(RF2-Pad19)">
+      <node ref="RF2" pin="19"/>
+    </net>
+    <net code="66" name="Net-(RF2-Pad28)">
+      <node ref="RF2" pin="28"/>
+    </net>
+    <net code="67" name="Net-(RF2-Pad27)">
+      <node ref="RF2" pin="27"/>
+    </net>
+    <net code="68" name="Net-(RF2-Pad26)">
+      <node ref="RF2" pin="26"/>
+    </net>
+    <net code="69" name="Net-(RF2-Pad25)">
+      <node ref="RF2" pin="25"/>
+    </net>
+    <net code="70" name="Net-(RF2-Pad24)">
+      <node ref="RF2" pin="24"/>
+    </net>
+    <net code="71" name="Net-(RF2-Pad23)">
+      <node ref="RF2" pin="23"/>
+    </net>
+    <net code="72" name="Net-(RF2-Pad20)">
+      <node ref="RF2" pin="20"/>
+    </net>
+    <net code="73" name="Net-(RF2-Pad18)">
+      <node ref="RF2" pin="18"/>
+    </net>
+    <net code="74" name="Net-(RF2-Pad17)">
+      <node ref="RF2" pin="17"/>
+    </net>
+    <net code="75" name="Net-(RF2-Pad16)">
+      <node ref="RF2" pin="16"/>
+    </net>
+    <net code="76" name="Net-(RF2-Pad15)">
+      <node ref="RF2" pin="15"/>
+    </net>
+    <net code="77" name="Net-(RF2-Pad14)">
+      <node ref="RF2" pin="14"/>
+    </net>
+    <net code="78" name="Net-(RF2-Pad10)">
+      <node ref="RF2" pin="10"/>
+    </net>
+    <net code="79" name="/Console/CON_USB_D-">
+      <node ref="U3" pin="6"/>
+      <node ref="J5" pin="2"/>
+    </net>
+    <net code="80" name="/Console/CON_USB_D+">
+      <node ref="U3" pin="5"/>
+      <node ref="J5" pin="3"/>
+    </net>
+    <net code="81" name="/Console/BT_KEY">
+      <node ref="RF2" pin="34"/>
+      <node ref="J6" pin="1"/>
+      <node ref="R17" pin="2"/>
+    </net>
+    <net code="82" name="/Console/BT_STATUS">
+      <node ref="RF2" pin="31"/>
+      <node ref="R18" pin="2"/>
+    </net>
+    <net code="83" name="Net-(LED4-Pad2)">
+      <node ref="LED4" pin="2"/>
+      <node ref="R18" pin="1"/>
+    </net>
+    <net code="84" name="Net-(RF2-Pad7)">
+      <node ref="RF2" pin="7"/>
+    </net>
+    <net code="85" name="Net-(RF2-Pad9)">
+      <node ref="RF2" pin="9"/>
+    </net>
+    <net code="86" name="Net-(RF2-Pad8)">
+      <node ref="RF2" pin="8"/>
+    </net>
+    <net code="87" name="Net-(RF2-Pad6)">
+      <node ref="RF2" pin="6"/>
+    </net>
+    <net code="88" name="Net-(RF2-Pad5)">
+      <node ref="RF2" pin="5"/>
+    </net>
+    <net code="89" name="Net-(RF2-Pad4)">
+      <node ref="RF2" pin="4"/>
+    </net>
+    <net code="90" name="Net-(RF2-Pad33)">
+      <node ref="RF2" pin="33"/>
+    </net>
+    <net code="91" name="Net-(RF2-Pad30)">
+      <node ref="RF2" pin="30"/>
+    </net>
+    <net code="92" name="Net-(RF2-Pad3)">
+      <node ref="RF2" pin="3"/>
+    </net>
+    <net code="93" name="Net-(RF2-Pad29)">
+      <node ref="RF2" pin="29"/>
+    </net>
+    <net code="94" name="Net-(D7-Pad1)">
+      <node ref="D7" pin="1"/>
+      <node ref="RF2" pin="1"/>
+      <node ref="R15" pin="1"/>
+    </net>
+    <net code="95" name="Net-(U3-Pad13)">
+      <node ref="U3" pin="13"/>
+    </net>
+    <net code="96" name="Net-(U3-Pad12)">
+      <node ref="U3" pin="12"/>
+    </net>
+    <net code="97" name="Net-(U3-Pad11)">
+      <node ref="U3" pin="11"/>
+    </net>
+    <net code="98" name="Net-(U3-Pad10)">
+      <node ref="U3" pin="10"/>
+    </net>
+    <net code="99" name="Net-(U3-Pad14)">
+      <node ref="U3" pin="14"/>
+    </net>
+    <net code="100" name="Net-(U3-Pad9)">
+      <node ref="U3" pin="9"/>
+    </net>
+    <net code="101" name="/Console/USB_XI">
+      <node ref="U3" pin="7"/>
+      <node ref="Y1" pin="2"/>
+      <node ref="C25" pin="2"/>
+    </net>
+    <net code="102" name="Net-(U3-Pad15)">
+      <node ref="U3" pin="15"/>
+    </net>
+    <net code="103" name="Net-(C21-Pad1)">
+      <node ref="C21" pin="1"/>
+      <node ref="U2" pin="4"/>
+    </net>
+    <net code="104" name="Net-(U2-Pad9)">
+      <node ref="U2" pin="9"/>
+    </net>
+    <net code="105" name="Net-(U2-Pad8)">
+      <node ref="U2" pin="8"/>
+    </net>
+    <net code="106" name="Net-(U2-Pad7)">
+      <node ref="U2" pin="7"/>
+    </net>
+    <net code="107" name="Net-(C21-Pad2)">
+      <node ref="U2" pin="5"/>
+      <node ref="C21" pin="2"/>
+    </net>
+    <net code="108" name="/Console/RS232_TX">
+      <node ref="U2" pin="14"/>
+      <node ref="J4" pin="4"/>
+    </net>
+    <net code="109" name="/Console/RS232_RX">
+      <node ref="J4" pin="3"/>
+      <node ref="U2" pin="13"/>
+    </net>
+    <net code="110" name="Net-(U2-Pad10)">
+      <node ref="U2" pin="10"/>
+    </net>
+    <net code="111" name="Net-(C23-Pad2)">
+      <node ref="C23" pin="2"/>
+      <node ref="U2" pin="6"/>
+    </net>
+    <net code="112" name="Net-(C22-Pad2)">
+      <node ref="C22" pin="2"/>
+      <node ref="U2" pin="2"/>
+    </net>
+    <net code="113" name="Net-(C19-Pad2)">
+      <node ref="U2" pin="3"/>
+      <node ref="C19" pin="2"/>
+    </net>
+    <net code="114" name="Net-(C19-Pad1)">
+      <node ref="U2" pin="1"/>
+      <node ref="C19" pin="1"/>
+    </net>
+    <net code="115" name="/Console/MAX232_TX">
+      <node ref="R14" pin="1"/>
+      <node ref="U2" pin="12"/>
+      <node ref="D6" pin="1"/>
+    </net>
+    <net code="116" name="/Console/USB_TX">
+      <node ref="U3" pin="2"/>
+      <node ref="R16" pin="2"/>
+      <node ref="D8" pin="1"/>
+    </net>
+    <net code="117" name="/Console/USB_XO">
+      <node ref="Y1" pin="1"/>
+      <node ref="U3" pin="8"/>
+      <node ref="C26" pin="2"/>
+    </net>
+  </nets>
+</export>

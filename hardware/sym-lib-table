@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name kedtracker-rescue)(type Legacy)(uri ${KIPRJMOD}/kedtracker-rescue.lib)(options "")(descr ""))
+)
